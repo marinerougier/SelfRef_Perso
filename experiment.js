@@ -796,6 +796,7 @@ var iat_instructions_block_2 = {
     "<span class='iat-category good-bad'>" + block_2_right_label_bottom  + "</span>" +
   "</p></div>" +
   "<div class='iat-instructions' style='position: relative; top: 42%'> "+
+  "<h1 class ='custom-title'> Block 2/4 </h1>" +
     "<p class='instructions'>" +
     "<br>" +
     "Categories have the same position as before." +
@@ -828,6 +829,7 @@ var iat_instructions_block_3 = {
     "<span class='iat-category good-bad'>" + block_3_right_label_bottom  + "</span>" +
   "</p></div>" +
   "<div class='iat-instructions' style='position: relative; top: 42%'> "+
+  "<h1 class ='custom-title'> Block 3/4 </h1>" +
     "<p class='instructions'>" +
     "Categories have have changed position!" +
     "</p>" +
@@ -860,6 +862,7 @@ var iat_instructions_block_4 = {
     "<span class='iat-category good-bad'>" + block_4_right_label_bottom  + "</span>" +
   "</p></div>" +
   "<div class='iat-instructions' style='position: relative; top: 42%'> "+
+  "<h1 class ='custom-title'> Block 4/4 </h1>" +
     "<p class='instructions'>" +
     "<br>" +
     "Categories have the same position as before." +
