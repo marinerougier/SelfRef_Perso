@@ -23,6 +23,15 @@ if(!is_compatible) {
 
 }
 
+// firebase initialization ---------------------------------------------------------------
+  var firebase_config = {
+        apiKey: "AIzaSyBwDr8n-RNCbBOk1lKIxw7AFgslXGcnQzM",
+        databaseURL: "https://postdocgent.firebaseio.com/"
+  };
+
+  firebase.initializeApp(firebase_config);
+  var database = firebase.database();
+
   // prolific variables
   var prolificID = jsPsych.data.getURLVariable("PROLIFIC_PID");
   if(prolificID == null) {prolificID = "999";}
@@ -1748,18 +1757,9 @@ if(is_compatible) {
     on_finish: function(data) {
        $("#jspsych-content").html("<img src='https://i.gifer.com/4V0b.gif'>");
 
-        /* Initialize Firebase */
-            var config = {
-                apiKey: "AIzaSyBwDr8n-RNCbBOk1lKIxw7AFgslXGcnQzM",
-                databaseURL: "https://aatjpsp2.firebaseio.com/"
-            };
-
-            firebase.initializeApp(config);
-            var database = firebase.database();
-        
         /* jsPsych: add data to every trial */
             jsPsych.data.addProperties({
-                id: id,
+                jspsych_id: jspsych_id,
                 prolificID: prolificID,
                 pairing_SelfRef: pairing_SelfRef,
                 rating_firstgroup: rating_firstgroup,
