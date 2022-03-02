@@ -799,7 +799,7 @@ var iat_instructions_block_2 = {
   "<h1 class ='custom-title'> Block 2/4 </h1>" +
     "<p class='instructions'>" +
     "<br>" +
-    "Categories have the same position as before." +
+    "Categories have the same position as in Block 1." +
     "</p>" +
     "<p class='instructions'>" +
     "As before, use the <span class='key'>E</span> and <span class='key'>I</span> keys to categorize " +
@@ -831,6 +831,7 @@ var iat_instructions_block_3 = {
   "<div class='iat-instructions' style='position: relative; top: 42%'> "+
   "<h1 class ='custom-title'> Block 3/4 </h1>" +
     "<p class='instructions'>" +
+    "<br>" +
     "Categories have have changed position!" +
     "</p>" +
     "<p class='instructions'>" +
@@ -865,7 +866,7 @@ var iat_instructions_block_4 = {
   "<h1 class ='custom-title'> Block 4/4 </h1>" +
     "<p class='instructions'>" +
     "<br>" +
-    "Categories have the same position as before." +
+    "Categories have the same position as in Block 3." +
     "</p>" +
     "<p class='instructions'>" +
     "As before, use the <span class='key'>E</span> and <span class='key'>I</span> keys to categorize " +
