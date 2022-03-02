@@ -751,13 +751,13 @@ var iat_instructions_block_1 = {
   post_trial_gap: 200,
   stimulus:
   "<div style='position: absolute; top: 18%; left: 20%'><p>" +
-    "Press <span class='key'>E</span> for words relating to:<br> " +
+    "Press <span class='key'>E</span> for items relating to:<br> " +
     "<span class='iat-category good-bad'>" + block_1_left_label_top  + "</span>" +
     "<br>" +
     "<span class='iat-category good-bad'>" + block_1_left_label_bottom + "</span>" +
   "</p></div>" +
   "<div style='position: absolute; top: 18%; right: 20%'><p>" +
-    "Press <span class='key'>I</span>  for words relating to:<br>" +
+    "Press <span class='key'>I</span>  for items relating to:<br>" +
     "<span class='iat-category good-bad'>" + block_1_right_label_top + "</span>" +
     "<br>" +
     "<span class='iat-category good-bad'>" + block_1_right_label_bottom  + "</span>" +
@@ -784,13 +784,13 @@ var iat_instructions_block_2 = {
   post_trial_gap: 200,
   stimulus:
   "<div style='position: absolute; top: 18%; left: 20%'><p>" +
-    "Press <span class='key'>E</span> for words relating to:<br> " +
+    "Press <span class='key'>E</span> for items relating to:<br> " +
     "<span class='iat-category good-bad'>" + block_2_left_label_top  + "</span>" +
     "<br>" +
     "<span class='iat-category good-bad'>" + block_2_left_label_bottom + "</span>" +
   "</p></div>" +
   "<div style='position: absolute; top: 18%; right: 20%'><p>" +
-    "Press <span class='key'>I</span>  for words relating to:<br>" +
+    "Press <span class='key'>I</span>  for items relating to:<br>" +
     "<span class='iat-category good-bad'>" + block_2_right_label_top + "</span>" +
     "<br>" +
     "<span class='iat-category good-bad'>" + block_2_right_label_bottom  + "</span>" +
@@ -817,13 +817,13 @@ var iat_instructions_block_3 = {
   post_trial_gap: 200,
   stimulus:
   "<div style='position: absolute; top: 18%; left: 20%'><p>" +
-    "Press <span class='key'>E</span> for words relating to:<br> " +
+    "Press <span class='key'>E</span> for items relating to:<br> " +
     "<span class='iat-category good-bad'>" + block_3_left_label_top  + "</span>" +
     "<br>" +
     "<span class='iat-category good-bad'>" + block_3_left_label_bottom + "</span>" +
   "</p></div>" +
   "<div style='position: absolute; top: 18%; right: 20%'><p>" +
-    "Press <span class='key'>I</span>  for words relating to:<br>" +
+    "Press <span class='key'>I</span>  for items relating to:<br>" +
     "<span class='iat-category good-bad'>" + block_3_right_label_top + "</span>" +
     "<br>" +
     "<span class='iat-category good-bad'>" + block_3_right_label_bottom  + "</span>" +
@@ -851,13 +851,13 @@ var iat_instructions_block_4 = {
   post_trial_gap: 200,
   stimulus:
   "<div style='position: absolute; top: 18%; left: 20%'><p>" +
-    "Press <span class='key'>E</span> for words relating to:<br> " +
+    "Press <span class='key'>E</span> for items relating to:<br> " +
     "<span class='iat-category good-bad'>" + block_4_left_label_top  + "</span>" +
     "<br>" +
     "<span class='iat-category good-bad'>" + block_4_left_label_bottom + "</span>" +
   "</p></div>" +
   "<div style='position: absolute; top: 18%; right: 20%'><p>" +
-    "Press <span class='key'>I</span>  for words relating to:<br>" +
+    "Press <span class='key'>I</span>  for items relating to:<br>" +
     "<span class='iat-category good-bad'>" + block_4_right_label_top + "</span>" +
     "<br>" +
     "<span class='iat-category good-bad'>" + block_4_right_label_bottom  + "</span>" +
