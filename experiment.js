@@ -675,6 +675,7 @@ var iat_instructions_1_G1B = {
       "</tr>" +
     "</table>" +
     "<br>" +
+    "<p class='instructions'><center>You will perform four categorization blocks of 26 trials each.</center></p>" +
     "<br>" +
     "<p class = 'continue-instructions'>Press <span class='key'>space</span>" +
     " to continue.</p>",
