@@ -734,6 +734,7 @@ var iat_instructions_1_G1Y = {
       "</tr>" +
     "</table>" +
     "<br>" +
+    "<p class='instructions'><center>You will perform four categorization blocks of 26 trials each.</center></p>" +
     "<br>" +
     "<p class = 'continue-instructions'>Press <span class='key'>space</span>" +
     " to continue.</p>",
@@ -761,6 +762,7 @@ var iat_instructions_block_1 = {
     "<span class='iat-category good-bad'>" + block_1_right_label_bottom  + "</span>" +
   "</p></div>" +
   "<div class='iat-instructions' style='position: relative; top: 42%'> "+
+  "<h1 class ='custom-title'> Block 1/4 </h1>" +
     "<p class='instructions'>" +
     "<br>" +
     "Remember, each item belongs to only one group." +
