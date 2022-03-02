@@ -23,6 +23,15 @@ if(!is_compatible) {
 
 }
 
+// firebase initialization ---------------------------------------------------------------
+  var firebase_config = {
+        apiKey: "AIzaSyBwDr8n-RNCbBOk1lKIxw7AFgslXGcnQzM",
+        databaseURL: "https://postdocgent.firebaseio.com/"
+  };
+
+  firebase.initializeApp(firebase_config);
+  var database = firebase.database();
+
   // prolific variables
   var prolificID = jsPsych.data.getURLVariable("PROLIFIC_PID");
   if(prolificID == null) {prolificID = "999";}
@@ -155,7 +164,7 @@ preloadimages.push(faces_G1B, faces_G1Y);
 // init ---------------------------------------------------------------------------------
   var saving_id = function(){
      database
-        .ref("SelfRef_participant_id/")
+        .ref("iat_participant_id/")
         .push()
         .set({jspsych_id: jspsych_id,
                prolificID: prolificID,
@@ -166,7 +175,7 @@ preloadimages.push(faces_G1B, faces_G1Y);
   // iat trial ----------------------------------------------------------------------------
   var saving_iat_trial = function(){
     database
-      .ref("SelfRef_trial/")
+      .ref("iat_trial_2/")
       .push()
       .set({jspsych_id: jspsych_id,
           prolificID: prolificID,
@@ -179,7 +188,7 @@ preloadimages.push(faces_G1B, faces_G1Y);
 
   var saving_browser_events = function(completion) {
     database
-     .ref("SelfRef_browser_event/")
+     .ref("iat_browser_event/")
      .push()
      .set({jspsych_id: jspsych_id,
       prolificID: prolificID,
@@ -1741,56 +1750,13 @@ jsPsych.pluginAPI.preloadImages(loading_gif);
 if(is_compatible) {
   jsPsych.init({
       timeline: timeline,
-      preload_images: preloadimages,
       on_interaction_data_update: function() {
         saving_browser_events(completion = false);
       },
-    on_finish: function(data) {
-       $("#jspsych-content").html("<img src='https://i.gifer.com/4V0b.gif'>");
-
-        /* Initialize Firebase */
-            var config = {
-                apiKey: "AIzaSyBwDr8n-RNCbBOk1lKIxw7AFgslXGcnQzM",
-                databaseURL: "https://aatjpsp2.firebaseio.com/"
-            };
-
-            firebase.initializeApp(config);
-            var database = firebase.database();
-        
-        /* jsPsych: add data to every trial */
-            jsPsych.data.addProperties({
-                id: id,
-                prolificID: prolificID,
-                pairing_SelfRef: pairing_SelfRef,
-                rating_firstgroup: rating_firstgroup,
-                ColorGroup: ColorGroup,
-            });
-
-        var dataSelfRating = data.filter({ target_rating: 'self' }).csv();
-        var dataBlueRating = data.filter({ target_rating: 'blue group' }).csv();
-        var dataYellowRating = data.filter({ target_rating: 'yellow group' }).csv();
-
+    on_finish: function() {
         saving_browser_events(completion = true);
-
-        /* Send data to Firebase */
-      database
-        .ref("SelfRef_Perso/" + jspsych_id + "/")
-        .update({ dataSelfRating })
-        .then(function () {
-      database
-        .ref("SelfRef_Perso/" + jspsych_id + "/")
-        .update({ dataBlueRating })
-        .then(function () {
-      database
-        .ref("SelfRef_Perso/" + jspsych_id + "/")
-        .update({ dataYellowRating })
-        .then(function () {
-              console.log("Data sent!");
-              $("#jspsych-content").html(debrief);
-              //setTimeout(jsPsych.data.displayData, 5000);
-           });
-         });
-        });
+        window.location.href = "https://marinerougier.github.io/Ugent_3/Rating_task/rating_task.html?jspsych_id=" + jspsych_id + "&prolificID="+ 
+        prolificID + "&pairing_SelfRef=" + pairing_SelfRef ;
     }
   });
 }
