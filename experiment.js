@@ -826,7 +826,7 @@ var iat_instructions_block_3 = {
   "</p></div>" +
   "<div class='iat-instructions' style='position: relative; top: 42%'> "+
     "<p class='instructions'>" +
-    "Remember, each item belongs to only one group." +
+    "Categories have have changed position!" +
     "</p>" +
     "<p class='instructions'>" +
     "<br>" +
