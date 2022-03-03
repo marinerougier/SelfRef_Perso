@@ -567,8 +567,8 @@ var iat_instructions_1 = {
   post_trial_gap: 200,
   stimulus:
     "<h1 class ='custom-title'> Part 2: Categorization task </h1>" +
-    "<p class='instructions'>In this task, you will be asked to sort pictures and words" +
-    " into groups as accurately as you can using the keyboard. In the following screen you will be presented" +
+    "<p class='instructions'>In this task, you will be asked to categorize pictures and words" +
+    " as accurately as you can using the keyboard. In the following screen you will be presented" +
     " a list of category labels and the items that belong to each of these categories." +
     "</p>" +
     "<p class='instructions'>As you will see, you will sort the pictures of two individuals, Andy and Mike," +
