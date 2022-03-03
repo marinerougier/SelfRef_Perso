@@ -85,7 +85,7 @@ if(!is_compatible) {
 var pairing_SelfRef = jsPsych.randomization.sampleWithoutReplacement(["Andy_left", "Mike_left", "Andy_right", "Mike_right"], 1)[0];
 // First group rated in the final rating task
 var rating_firstgroup = jsPsych.randomization.sampleWithoutReplacement(["Andy_first", "Mike_first"], 1)[0];
-// group associated with the yellow or blue color
+// Picture associated with the andy vs. mike first name
 var Name_face   = jsPsych.randomization.sampleWithoutReplacement(["45_Andy", "55_Andy"], 1)[0];
         
 
@@ -118,7 +118,7 @@ var faces_55_Andy = [
       "stimuli/Face_55_Andy.jpeg"
 ];
 
-preloadimages.push(faces_G1B, faces_G1Y);
+preloadimages.push(faces_45_Andy, faces_55_Andy);
 
 
 // Saving blocks ------------------------------------------------------------------------
@@ -383,11 +383,6 @@ Self-referencing task (SR-task): Four blocks of 40 trials each (standard version
 In case of incorrect classification: a red ‘X’ appears (remains until correction). 
 */
 
-var att_side      = undefined;
-var empty_side     = undefined;
-var blue_side_1st = undefined;
-var yellow_side_1st  = undefined;
-
 // Label -----------------------------------
 var block_1_left_label_top      = undefined;
 var block_1_right_label_top     = undefined;
@@ -521,21 +516,21 @@ switch(pairing_SelfRef) {
         block_1_left_label_bottom  = "<b>Other</b>-related words";
         block_1_right_label_bottom = "<b>Self</b>-related words";
         block_1_left_label_top   = "Andy";
-        block_1_right_label_top  = color_yellow+" group";
+        block_1_right_label_top  = "Mike";
 
         block_2_left_label_bottom  = "<b>Other</b>-related words";
         block_2_right_label_bottom = "<b>Self</b>-related words";
         block_2_left_label_top   = "Andy";
-        block_2_right_label_top  = color_yellow+" group";
+        block_2_right_label_top  = "Mike";
 
         block_3_left_label_bottom  = "<b>Self</b>-related words";
         block_3_right_label_bottom = "<b>Other</b>-related words";
-        block_3_left_label_top   = color_yellow+" group";
+        block_3_left_label_top   = "Mike";
         block_3_right_label_top  = "Andy";
 
         block_4_left_label_bottom  = "<b>Self</b>-related words";
         block_4_right_label_bottom = "<b>Other</b>-related words";
-        block_4_left_label_top   = color_yellow+" group";
+        block_4_left_label_top   = "Mike";
         block_4_right_label_top  = "Andy";
     break;
 }
@@ -573,7 +568,7 @@ var iat_instructions_1 = {
     " into groups as accurately as you can using the keyboard. In the following screen you will be presented" +
     " a list of category labels and the items that belong to each of these categories." +
     "</p>" +
-    "<p class='instructions'>As you will see, you will sort the picture of two individuals, Andy and Mike," +
+    "<p class='instructions'>As you will see, you will sort the pictures of two individuals, Andy and Mike," +
     " and words depending on whether they refer to the <b>self</b> or to <b>others.</b></p>" +
     "<h3 class='instructions'>Instructions</h3>" +
     "<ul class='instructions'>" +
@@ -601,19 +596,11 @@ var iat_instructions_1_45_Andy = {
       "<br>" +
       "<tr>" +
         "<td><b>Self</b>-related words:</td>" +
-        "<td align='left'>me </td>"+
-        "<td align='left'>mine </td>"+
-        "<td align='left'>I </td>"+
-        "<td align='left'>myself </td>" +
-        "<td align='left'>my </td>" +
+        "<td align='left'>me,  mine,  I,  myself,  my </td>"+
       "</tr>" +
       "<tr>" +
         "<td><b>Other</b>-related words:</td>" +
-        "<td align='left'>others </td>"+
-        "<td align='left'>they </td>"+
-        "<td align='left'>their </td>"+
-        "<td align='left'>she </td>" +
-        "<td align='left'>he </td>" +
+        "<td align='left'>others,  they,  their,  she,  he </td>"+
       "</tr>" +
       "<tr>" +
         "<td>Andy:</td>" +
@@ -647,19 +634,11 @@ var iat_instructions_1_55_Andy = {
       "<br>" +
       "<tr>" +
         "<td><b>Self</b>-related words:</td>" +
-        "<td align='left'>me </td>"+
-        "<td align='left'>mine </td>"+
-        "<td align='left'>I </td>"+
-        "<td align='left'>myself </td>" +
-        "<td align='left'>my </td>" +
+        "<td align='left'>me,  mine,  I,  myself,  my </td>"+
       "</tr>" +
       "<tr>" +
         "<td><b>Other</b>-related words:</td>" +
-        "<td align='left'>others </td>"+
-        "<td align='left'>they </td>"+
-        "<td align='left'>their </td>"+
-        "<td align='left'>she </td>" +
-        "<td align='left'>he </td>" +
+        "<td align='left'>others,  they,  their,  she,  he </td>"+
       "</tr>" +
       "<tr>" +
         "<td>Andy:</td>" +
@@ -768,7 +747,7 @@ var iat_instructions_block_3 = {
   "<h1 class ='custom-title'> Block 3/4 </h1>" +
     "<p class='instructions'>" +
     "<br>" +
-    "Categories have have changed position!" +
+    "Categories have changed position!" +
     "</p>" +
     "<p class='instructions'>" +
     "<br>" +
@@ -1131,7 +1110,7 @@ var iat_instructions_2 = {
   choices: [32]
 };
 
-// Rating of the blue and yellow groups-----------------------------------------------------------------------------------
+// Rating of andy and mike -----------------------------------------------------------------------------------
 var Rating_instructions_1 = {
   type: "html-keyboard-response",
   post_trial_gap: 200,
@@ -1139,7 +1118,7 @@ var Rating_instructions_1 = {
     "<h1 class ='custom-title'> Part 3: Rating of Andy and Mike </h1>" +
     "<p class='instructions'>You should know that <b>the two persons</b> that you saw in the categorization task"+
     " (Andy and Mike)" +
-    " are in fact <b>very different from each other. Indeed, Andy and Mike have a very different personality and typically"+
+    " are in fact <b>very different from each other. Indeed, Andy and Mike have a very different personalities and typically"+
     " behave in very different ways.</br></br>"+
     " Your task is to evaluate Andy and Mike on the same series of traits as in Part 1."+
     " It is extremely important that you try to answer <b> as honestly and as spontaneously as possible.</b> There are no good or" +
@@ -1150,10 +1129,10 @@ var Rating_instructions_1 = {
   choices: [32]
 };
 
-var rating_Andy = {
+var rating_Andy_45Andy = {
         type: 'survey-likert',
         post_trial_gap: 200,
-        preamble: "<br><br><b><i>Andy is a person who...</b></i><br><br>",
+        preamble: "<br><br><img height = 300px src='stimuli/Face_45_Andy.jpeg'><br><br><b><i>Andy is a person who...</b></i><br><br>",
         questions: [
           {prompt: "<b>Tends to be quiet.</b>", labels: scale_questionnaire, required: true},
           {prompt: "<b>Is compassionate, has a soft heart.</b>", labels: scale_questionnaire, required: true},
@@ -1238,10 +1217,10 @@ var rating_Andy = {
         },
     };
 
-var rating_Mike = {
+var rating_Mike_45Andy = {
         type: 'survey-likert',
         post_trial_gap: 200,
-        preamble: "<br><br><b><i>Mike is a person who..</b></i><br><br>",
+        preamble: "<br><br><img height = 300px src='stimuli/Face_55_Mike.jpeg'><br><br><b><i>Mike is a person who..</b></i><br><br>",
         questions: [
           {prompt: "<b>Tends to be quiet.</b>", labels: scale_questionnaire, required: true},
           {prompt: "<b>Is compassionate, has a soft heart.</b>", labels: scale_questionnaire, required: true},
@@ -1326,6 +1305,183 @@ var rating_Mike = {
         },
     };
 
+var rating_Andy_55Andy = {
+        type: 'survey-likert',
+        post_trial_gap: 200,
+        preamble: "<br><br><img height = 300px src='stimuli/Face_55_Andy.jpeg'><br><br><b><i>Andy is a person who...</b></i><br><br>",
+        questions: [
+          {prompt: "<b>Tends to be quiet.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is compassionate, has a soft heart.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Tends to be disorganized.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Worries a lot.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is fascinated by art, music, or literature.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is dominant, acts as a leader.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is sometimes rude to others.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Has difficulty getting started on tasks.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Tends to feel depressed, blue.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Has little interest in abstract ideas.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is full of energy.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Assumes the best about people.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is reliable, can always be counted on.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is emotionally stable, not easily upset.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is original, comes up with new ideas.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is outgoing, sociable.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Can be cold and uncaring.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Keeps things neat and tidy.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is relaxed, handles stress well.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Has few artistic interests.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Prefers to have others take charge.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is respectful, treats others with respect.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is persistent, works until the task is finished.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Feels secure, comfortable with self.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is complex, a deep thinker.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is less active than other people.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Tends to find fault with others.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Can be somewhat careless.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is temperamental, gets emotional easily.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Has little creativity.</b>", labels: scale_questionnaire, required: true}
+        ],
+        randomize_question_order: false, 
+        button_label: 'Continue',
+        /*
+        on_load: function() {
+          window.scrollTo(0, 0);
+          //$(".jspsych-content").css("max-width", "100%");
+          $(".jspsych-content").css("margin-top", "100px");
+          //$(".jspsych-survey-likert-statement").css("margin", "0px");
+          //$(".jspsych-survey-likert-statement").css("padding", "0px");
+          //$(".jspsych-survey-likert-opts").css("padding", "0 0 10px");
+          //$("#jspsych-survey-likert-next").css("margin-top", "10px");
+          //$("#jspsych-survey-likert-form").css("width", "800px");
+         // $("li").css("width", "9%");
+        },
+        */
+        on_finish: function(data) {
+          data.task = "rating";
+          var parsed_response  = JSON.parse(data.responses);
+          data.Personality_1      = parsed_response.Q0 ;
+          data.Personality_2     = parsed_response.Q1 ;
+          data.Personality_3     = parsed_response.Q2 ;
+          data.Personality_4     = parsed_response.Q3 ;
+          data.Personality_5     = parsed_response.Q4 ;
+          data.Personality_6     = parsed_response.Q5 ;
+          data.Personality_7     = parsed_response.Q6 ;
+          data.Personality_8     = parsed_response.Q7 ;
+          data.Personality_9     = parsed_response.Q8 ;
+          data.Personality_10     = parsed_response.Q9 ;
+          data.Personality_11     = parsed_response.Q10 ;
+          data.Personality_12     = parsed_response.Q11 ;
+          data.Personality_13     = parsed_response.Q12 ;
+          data.Personality_14     = parsed_response.Q13 ;
+          data.Personality_15     = parsed_response.Q14 ;
+          data.Personality_16     = parsed_response.Q15 ;
+          data.Personality_17     = parsed_response.Q16 ;
+          data.Personality_18     = parsed_response.Q17 ;
+          data.Personality_19     = parsed_response.Q18 ;
+          data.Personality_20     = parsed_response.Q19 ;
+          data.Personality_21     = parsed_response.Q20 ;
+          data.Personality_22     = parsed_response.Q21 ;
+          data.Personality_23     = parsed_response.Q22 ;
+          data.Personality_24     = parsed_response.Q23 ;
+          data.Personality_25     = parsed_response.Q24 ;
+          data.Personality_26     = parsed_response.Q25 ;
+          data.Personality_27     = parsed_response.Q26 ;
+          data.Personality_28     = parsed_response.Q27 ;
+          data.Personality_29     = parsed_response.Q28 ;
+          data.Personality_30     = parsed_response.Q29 ;
+          data.target_rating    = "Andy";
+        },
+    };
+
+var rating_Mike_55Andy = {
+        type: 'survey-likert',
+        post_trial_gap: 200,
+        preamble: "<br><br><img height = 300px src='stimuli/Face_45_Mike.jpeg'><br><br><b><i>Mike is a person who..</b></i><br><br>",
+        questions: [
+          {prompt: "<b>Tends to be quiet.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is compassionate, has a soft heart.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Tends to be disorganized.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Worries a lot.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is fascinated by art, music, or literature.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is dominant, acts as a leader.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is sometimes rude to others.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Has difficulty getting started on tasks.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Tends to feel depressed, blue.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Has little interest in abstract ideas.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is full of energy.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Assumes the best about people.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is reliable, can always be counted on.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is emotionally stable, not easily upset.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is original, comes up with new ideas.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is outgoing, sociable.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Can be cold and uncaring.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Keeps things neat and tidy.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is relaxed, handles stress well.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Has few artistic interests.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Prefers to have others take charge.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is respectful, treats others with respect.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is persistent, works until the task is finished.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Feels secure, comfortable with self.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is complex, a deep thinker.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is less active than other people.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Tends to find fault with others.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Can be somewhat careless.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is temperamental, gets emotional easily.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Has little creativity.</b>", labels: scale_questionnaire, required: true}
+        ],
+        randomize_question_order: false, 
+        button_label: 'Continue',
+        /*
+        on_load: function() {
+          window.scrollTo(0, 0);
+          //$(".jspsych-content").css("max-width", "100%");
+          $(".jspsych-content").css("margin-top", "100px");
+          //$(".jspsych-survey-likert-statement").css("margin", "0px");
+          //$(".jspsych-survey-likert-statement").css("padding", "0px");
+          //$(".jspsych-survey-likert-opts").css("padding", "0 0 10px");
+          //$("#jspsych-survey-likert-next").css("margin-top", "10px");
+          //$("#jspsych-survey-likert-form").css("width", "800px");
+         // $("li").css("width", "9%");
+        },
+        */
+        on_finish: function(data) {
+          data.task = "rating";
+          var parsed_response  = JSON.parse(data.responses);
+          data.Personality_1      = parsed_response.Q0 ;
+          data.Personality_2     = parsed_response.Q1 ;
+          data.Personality_3     = parsed_response.Q2 ;
+          data.Personality_4     = parsed_response.Q3 ;
+          data.Personality_5     = parsed_response.Q4 ;
+          data.Personality_6     = parsed_response.Q5 ;
+          data.Personality_7     = parsed_response.Q6 ;
+          data.Personality_8     = parsed_response.Q7 ;
+          data.Personality_9     = parsed_response.Q8 ;
+          data.Personality_10     = parsed_response.Q9 ;
+          data.Personality_11     = parsed_response.Q10 ;
+          data.Personality_12     = parsed_response.Q11 ;
+          data.Personality_13     = parsed_response.Q12 ;
+          data.Personality_14     = parsed_response.Q13 ;
+          data.Personality_15     = parsed_response.Q14 ;
+          data.Personality_16     = parsed_response.Q15 ;
+          data.Personality_17     = parsed_response.Q16 ;
+          data.Personality_18     = parsed_response.Q17 ;
+          data.Personality_19     = parsed_response.Q18 ;
+          data.Personality_20     = parsed_response.Q19 ;
+          data.Personality_21     = parsed_response.Q20 ;
+          data.Personality_22     = parsed_response.Q21 ;
+          data.Personality_23     = parsed_response.Q22 ;
+          data.Personality_24     = parsed_response.Q23 ;
+          data.Personality_25     = parsed_response.Q24 ;
+          data.Personality_26     = parsed_response.Q25 ;
+          data.Personality_27     = parsed_response.Q26 ;
+          data.Personality_28     = parsed_response.Q27 ;
+          data.Personality_29     = parsed_response.Q28 ;
+          data.Personality_30     = parsed_response.Q29 ;
+          data.target_rating    = "Mike";
+        },
+    };
+
+
 var Rating_instructions_end = {
   type: "html-keyboard-response",
   post_trial_gap: 200,
@@ -1341,7 +1497,7 @@ var Rating_instructions_end = {
 /* Memory of the self-group referencing */
 var memory_group = {
       type: 'survey-multi-choice',
-      questions: [{prompt: "In the categorization task, what group shared the same response key with self-related words?", options: ['The blue group', 'The yellow group', 'I do not remember'], required: true}],
+      questions: [{prompt: "In the categorization task, who shared the same response key with self-related words?", options: ['Andy', 'Mike', 'I do not remember'], required: true}],
       button_label: "Continue",
       on_load: function() {
           window.scrollTo(0, 0);
@@ -1378,7 +1534,7 @@ var memory_group = {
 
   var influence_awareness = {
       type: 'survey-multi-choice',
-      questions: [{prompt: "Do you think that the key sharing between self- and other-related words<br> and faces of the blue or yellow group influenced your judgment of the<br> blue and yellow groups when you had to judge them on the personality <br>traits/outcomes?", options: ['Yes', 'No', 'I do not know'], required: true}],
+      questions: [{prompt: "Do you think that the key sharing between self- and other-related words<br> and Andy and Mike influenced your judgment of <br>Andy and Mike when you had to judge them on the personality <br>traits/outcomes?", options: ['Yes', 'No', 'I do not know'], required: true}],
       button_label: "Continue",
       on_load: function() {
           window.scrollTo(0, 0);
@@ -1394,7 +1550,7 @@ var memory_group = {
 
   var demand_compliance = {
       type: 'survey-multi-choice',
-      questions: [{prompt: "When we asked you to evaluate the yellow and blue groups on the personality traits/outcomes,<br> did you tell us the truth about what you think? Or did you just fake your response (i.e., tell us <br>what you thought we wanted to hear)? Please be honest here (it will not affect payment in any way).", options: ['Yes - I faked my response based on what I thought the researchers wanted to find', 'No - my responses were based on how I genuinely felt', 'I do not know'], required: true}],
+      questions: [{prompt: "When we asked you to evaluate Andy and Mike on the personality traits/outcomes,<br> did you tell us the truth about what you think? Or did you just fake your response (i.e., tell us <br>what you thought we wanted to hear)? Please be honest here (it will not affect payment in any way).", options: ['Yes - I faked my response based on what I thought the researchers wanted to find', 'No - my responses were based on how I genuinely felt', 'I do not know'], required: true}],
       button_label: "Continue",
       on_load: function() {
           window.scrollTo(0, 0);
@@ -1515,8 +1671,8 @@ var memory_group = {
   debrief += "naturally behave.<br><br>";
   debrief += "Now we would like to explain what we were trying to learn about with this study. In the first part of the study, we assessed your "; 
   debrief += "personality using the Big Five Inventory (e.g., to what extent you think you are extroverted). In the second part, we asked you to categorize words referring to the self (e.g. 'I') "; 
-  debrief += "and to others (e.g., 'he') together with blue- and yellow-background faces. Our goal in this second part was to create a special link "; 
-  debrief += "beteween these groups of items: When two groups (e.g., self words and blue faces) share the same response key, we expect "; 
+  debrief += "and to others (e.g., 'he') together with picures of Andy and Mike. Our goal in this second part was to create a special link "; 
+  debrief += "beteween these categories of items: When two categories (e.g., self words and a picture of Mike) share the same response key, we expect "; 
   debrief += "them to be more strongly linked after the task. If so, you should have rated the group of faces sharing the response key with ";
   debrief += "self words as more similar to yourself in the third part (e.g., as more 'extroverted' if you think you are 'extroverted'). <br><br>"; 
   debrief += "We would like to emphasize that there are no correct responses in this study: We were looking at people’s natural responses. ";
@@ -1544,7 +1700,7 @@ var fullscreen_trial_exit = {
 
 var timeline = [];
 
-timeline.push(consent);
+//timeline.push(consent);
 
 // fullscreen
 timeline.push(
@@ -1557,54 +1713,47 @@ timeline.push(save_id);
 
 
 timeline.push(Personality_instructions_1,
-              rating_self,
+              //rating_self,
               Personality_instructions_end,
               hiding_cursor)
 
 
-switch(ColorGroup) {
-  case "G1B":
+switch(Name_face) {
+  case "45_Andy":
     timeline.push(iat_instructions_1,
-              iat_instructions_1_G1B,
+              iat_instructions_1_45_Andy,
               iat_instructions_block_1, 
-              iat_block_1_G1B,
+              //iat_block_1_Face_45_Andy,
               iat_instructions_block_2, 
-              iat_block_2_G1B,
+              //iat_block_2_Face_45_Andy,
               iat_instructions_block_3, 
-              iat_block_3_G1B,
+              //iat_block_3_Face_45_Andy,
               iat_instructions_block_4, 
-              iat_block_4_G1B,
-              iat_instructions_2);
+              //iat_block_4_Face_45_Andy,
+              iat_instructions_2,
+              showing_cursor,
+              Rating_instructions_1,
+              rating_Andy_45Andy,
+              rating_Mike_45Andy,
+              Rating_instructions_end);
     break;
-  case "G1Y":
+  case "55_Andy":
     timeline.push(iat_instructions_1,
-              iat_instructions_1_G1Y,
+              iat_instructions_1_55_Andy,
               iat_instructions_block_1, 
-              iat_block_1_G1Y,
+              //iat_block_1_Face_55_Andy,
               iat_instructions_block_2, 
-              iat_block_2_G1Y,
+              //iat_block_2_Face_55_Andy,
               iat_instructions_block_3, 
-              iat_block_3_G1Y,
+              //iat_block_3_Face_55_Andy,
               iat_instructions_block_4, 
-              iat_block_4_G1Y,
-              iat_instructions_2);
-    break;
-}
-
-switch(rating_firstgroup) {
-  case "blue_first":
-    timeline.push(showing_cursor,
-                  Rating_instructions_1,
-                  rating_blue,
-                  rating_yellow,
-                  Rating_instructions_end);
-    break;
-  case "yellow_first":
-    timeline.push(showing_cursor,
-                  Rating_instructions_1,
-                  rating_yellow,
-                  rating_blue,
-                  Rating_instructions_end);
+              //iat_block_4_Face_55_Andy,
+              iat_instructions_2,
+              showing_cursor,
+              Rating_instructions_1,
+              rating_Andy_55Andy,
+              rating_Mike_55Andy,
+              Rating_instructions_end);
     break;
 }
 
@@ -1647,12 +1796,12 @@ if(is_compatible) {
                 prolificID: prolificID,
                 pairing_SelfRef: pairing_SelfRef,
                 rating_firstgroup: rating_firstgroup,
-                ColorGroup: ColorGroup,
+                Name_face: Name_face,
             });
 
         var dataSelfRating = data.filter({ target_rating: 'self' }).csv();
-        var dataBlueRating = data.filter({ target_rating: 'blue group' }).csv();
-        var dataYellowRating = data.filter({ target_rating: 'yellow group' }).csv();
+        var dataAndy = data.filter({ target_rating: 'Andy' }).csv();
+        var dataMike = data.filter({ target_rating: 'Mike' }).csv();
 
         saving_browser_events(completion = true);
 
@@ -1663,11 +1812,11 @@ if(is_compatible) {
         .then(function () {
       database
         .ref("SelfRef_Perso/" + jspsych_id + "/")
-        .update({ dataBlueRating })
+        .update({ dataAndy })
         .then(function () {
       database
         .ref("SelfRef_Perso/" + jspsych_id + "/")
-        .update({ dataYellowRating })
+        .update({ dataMike })
         .then(function () {
               console.log("Data sent!");
               $("#jspsych-content").html(debrief);
