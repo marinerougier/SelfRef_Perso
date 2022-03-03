@@ -268,7 +268,10 @@ var Personality_instructions_1 = {
     "<p class='instructions'>In this first part, you will be asked to fill in a personality questionnaire. <br><br>" +
     " You will be presented with a number of characteristics that may or may not apply to you. For example, do you agree that you are" +
     "  someone who <i>likes to spend time with others</i>? <b>Please select a number for each statement to indicate"+
-    " the extent to which you agree or disagree with that statement. </b>" +
+    " the extent to which you agree or disagree with that statement. </b></br></br>" +
+    " It is extremely important that you try to answer <b> as honestly and as spontaneously as possible. We are only interested"+
+    " in your true personality here. Also, keep in mind that <b>your responses are anonymous </b>and will be analyzed in an "+
+    "aggregated way, that is, together with the answers of other participants.</b></br></br><br>"+
     "</p>" +
     "<p class = 'continue-instructions'>Press <span class='key'>space</span>" +
     " to continue.</p>",
@@ -572,7 +575,7 @@ var iat_instructions_1 = {
     " and words depending on whether they refer to the <b>self</b> or to <b>others.</b></p>" +
     "<h3 class='instructions'>Instructions</h3>" +
     "<ul class='instructions'>" +
-      "<li>Keep fingers on the <span class='key'>E</span> and <span class='key'>I</span>.</li>" +
+      "<li>Keep fingers on the <span class='key'>E</span> and <span class='key'>I</span> keys of the keyboard.</li>" +
       "<li>Labels at the top will tell you which items go with each key.</li>" +
       "<li>Be as accurate as you can.</li>" +
     "</ul>" +
@@ -604,11 +607,11 @@ var iat_instructions_1_45_Andy = {
       "</tr>" +
       "<tr>" +
         "<td>Andy:</td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face_45_Andy.jpeg'></td>" +
+        "<td align='left'><img height = 100px src='stimuli/Face_45_Andy.jpeg'></td>" +
       "</tr>" +
       "<tr>" +
         "<td>Mike:</td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face_55_Mike.jpeg'></td>" +
+        "<td align='left'><img height = 100px src='stimuli/Face_55_Mike.jpeg'></td>" +
       "</tr>" +
     "</table>" +
     "<br>" +
@@ -642,11 +645,11 @@ var iat_instructions_1_55_Andy = {
       "</tr>" +
       "<tr>" +
         "<td>Andy:</td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face_55_Andy.jpeg'></td>" +
+        "<td align='left'><img height = 100px src='stimuli/Face_55_Andy.jpeg'></td>" +
       "</tr>" +
       "<tr>" +
         "<td>Mike:</td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face_45_Mike.jpeg'></td>" +
+        "<td align='left'><img height = 100px src='stimuli/Face_45_Mike.jpeg'></td>" +
       "</tr>" +
     "</table>" +
     "<br>" +
@@ -1534,7 +1537,7 @@ var memory_group = {
 
   var influence_awareness = {
       type: 'survey-multi-choice',
-      questions: [{prompt: "Do you think that the key sharing between self- and other-related words<br> and Andy and Mike influenced your judgment of <br>Andy and Mike when you had to judge them on the personality <br>traits/outcomes?", options: ['Yes', 'No', 'I do not know'], required: true}],
+      questions: [{prompt: "Do you think that the key sharing between self- and other-related words<br> and Andy and Mike influenced your judgment of Andy and Mike <br>when you had to judge them on the personality traits/outcomes?", options: ['Yes', 'No', 'I do not know'], required: true}],
       button_label: "Continue",
       on_load: function() {
           window.scrollTo(0, 0);
@@ -1670,9 +1673,9 @@ var memory_group = {
   debrief += "like they naturally would in the real world. The whole point of this experiment is to find out how people would ";
   debrief += "naturally behave.<br><br>";
   debrief += "Now we would like to explain what we were trying to learn about with this study. In the first part of the study, we assessed your "; 
-  debrief += "personality using the Big Five Inventory (e.g., to what extent you think you are extroverted). In the second part, we asked you to categorize words referring to the self (e.g. 'I') "; 
+  debrief += "personality using the Big Five Inventory (e.g., to what extent you think you are extroverted). In the second part, we asked you to categorize words referring to the self (e.g., 'I') "; 
   debrief += "and to others (e.g., 'he') together with picures of Andy and Mike. Our goal in this second part was to create a special link "; 
-  debrief += "beteween these categories of items: When two categories (e.g., self words and a picture of Mike) share the same response key, we expect "; 
+  debrief += "between these categories of items: When two categories (e.g., self words and the picture of Mike) share the same response key, we expect "; 
   debrief += "them to be more strongly linked after the task. If so, you should have rated the group of faces sharing the response key with ";
   debrief += "self words as more similar to yourself in the third part (e.g., as more 'extroverted' if you think you are 'extroverted'). <br><br>"; 
   debrief += "We would like to emphasize that there are no correct responses in this study: We were looking at people’s natural responses. ";
@@ -1700,7 +1703,7 @@ var fullscreen_trial_exit = {
 
 var timeline = [];
 
-//timeline.push(consent);
+timeline.push(consent);
 
 // fullscreen
 timeline.push(
@@ -1713,7 +1716,7 @@ timeline.push(save_id);
 
 
 timeline.push(Personality_instructions_1,
-              //rating_self,
+              rating_self,
               Personality_instructions_end,
               hiding_cursor)
 
@@ -1723,13 +1726,13 @@ switch(Name_face) {
     timeline.push(iat_instructions_1,
               iat_instructions_1_45_Andy,
               iat_instructions_block_1, 
-              //iat_block_1_Face_45_Andy,
+              iat_block_1_Face_45_Andy,
               iat_instructions_block_2, 
-              //iat_block_2_Face_45_Andy,
+              iat_block_2_Face_45_Andy,
               iat_instructions_block_3, 
-              //iat_block_3_Face_45_Andy,
+              iat_block_3_Face_45_Andy,
               iat_instructions_block_4, 
-              //iat_block_4_Face_45_Andy,
+              iat_block_4_Face_45_Andy,
               iat_instructions_2,
               showing_cursor,
               Rating_instructions_1,
@@ -1741,13 +1744,13 @@ switch(Name_face) {
     timeline.push(iat_instructions_1,
               iat_instructions_1_55_Andy,
               iat_instructions_block_1, 
-              //iat_block_1_Face_55_Andy,
+              iat_block_1_Face_55_Andy,
               iat_instructions_block_2, 
-              //iat_block_2_Face_55_Andy,
+              iat_block_2_Face_55_Andy,
               iat_instructions_block_3, 
-              //iat_block_3_Face_55_Andy,
+              iat_block_3_Face_55_Andy,
               iat_instructions_block_4, 
-              //iat_block_4_Face_55_Andy,
+              iat_block_4_Face_55_Andy,
               iat_instructions_2,
               showing_cursor,
               Rating_instructions_1,
