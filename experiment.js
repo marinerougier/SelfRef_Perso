@@ -82,17 +82,11 @@ if(!is_compatible) {
 
 // Variable input -----------------------------------------------------------------------
 // group associated with the self and first side in the self-referencing task 
-var pairing_SelfRef = jsPsych.randomization.sampleWithoutReplacement(["blue_left", "yellow_left", "blue_right", "yellow_right"], 1)[0];
+var pairing_SelfRef = jsPsych.randomization.sampleWithoutReplacement(["Andy_left", "Mike_left", "Andy_right", "Mike_right"], 1)[0];
 // First group rated in the final rating task
-var rating_firstgroup = jsPsych.randomization.sampleWithoutReplacement(["blue_first", "yellow_first"], 1)[0];
+var rating_firstgroup = jsPsych.randomization.sampleWithoutReplacement(["Andy_first", "Mike_first"], 1)[0];
 // group associated with the yellow or blue color
-var ColorGroup   = jsPsych.randomization.sampleWithoutReplacement(["G1Y", "G1B"], 1)[0];
-
-
-var genColor = function (colorID, colorName) { return "<span style='color:" + colorID + "'><b>" + colorName + "</b></span>" };
-
-var color_blue = genColor("#2a57ea", "blue");
-var color_yellow = genColor("#b5a21b", "yellow");
+var Name_face   = jsPsych.randomization.sampleWithoutReplacement(["45_Andy", "55_Andy"], 1)[0];
         
 
  // cursor helper functions
@@ -114,44 +108,14 @@ var showing_cursor = {
 }
 
 // Preload faces
-var faces_G1B = [
-      "stimuli/Face19_J.png",
-      "stimuli/Face28_J.png",
-      "stimuli/Face55_J.png",
-      "stimuli/Face95_J.png",
-      "stimuli/Face104_J.png",
-      "stimuli/Face115_J.png",
-      "stimuli/Face119_J.png",
-      "stimuli/Face142_J.png",
-
-      "stimuli/Face10_B.png",
-      "stimuli/Face16_B.png",
-      "stimuli/Face17_B.png",
-      "stimuli/Face45_B.png",
-      "stimuli/Face85_B.png",
-      "stimuli/Face103_B.png",
-      "stimuli/Face116_B.png",
-      "stimuli/Face132_B.png"
+var faces_45_Andy = [
+      "stimuli/Face_45_Andy.jpeg",
+      "stimuli/Face_55_Mike.jpeg"
 ];
 
-var faces_G1Y = [
-      "stimuli/Face10_J.png",
-      "stimuli/Face16_J.png",
-      "stimuli/Face17_J.png",
-      "stimuli/Face45_J.png",
-      "stimuli/Face85_J.png",
-      "stimuli/Face103_J.png",
-      "stimuli/Face116_J.png",
-      "stimuli/Face132_J.png",
-
-      "stimuli/Face19_B.png",
-      "stimuli/Face28_B.png",
-      "stimuli/Face55_B.png",
-      "stimuli/Face95_B.png",
-      "stimuli/Face104_B.png",
-      "stimuli/Face115_B.png",
-      "stimuli/Face119_B.png",
-      "stimuli/Face142_B.png"
+var faces_55_Andy = [
+      "stimuli/Face_45_Mike.jpeg",
+      "stimuli/Face_55_Andy.jpeg"
 ];
 
 preloadimages.push(faces_G1B, faces_G1Y);
@@ -447,132 +411,132 @@ var block_5_right_label_bottom  = undefined;
 
 
 switch(pairing_SelfRef) {
-  case "blue_left":
+  case "Andy_left":
         self_side_1st              = "left";
         other_side_1st             = "right";
-        blue_side_1st              = "left";
-        yellow_side_1st            = "right";
+        Andy_side_1st              = "left";
+        Mike_side_1st            = "right";
 
         self_side_2nd              = "right";
         other_side_2nd             = "left";
-        blue_side_2nd              = "right";
-        yellow_side_2nd            = "left";
+        Andy_side_2nd              = "right";
+        Mike_side_2nd            = "left";
 
         block_1_left_label_bottom  = "<b>Self</b>-related words";
         block_1_right_label_bottom = "<b>Other</b>-related words";
-        block_1_left_label_top   = color_blue+" group";
-        block_1_right_label_top  = color_yellow+" group";
+        block_1_left_label_top   = "Andy";
+        block_1_right_label_top  = "Mike";
 
         block_2_left_label_bottom  = "<b>Self</b>-related words";
         block_2_right_label_bottom = "<b>Other</b>-related words";
-        block_2_left_label_top   = color_blue+" group";
-        block_2_right_label_top  = color_yellow+" group";
+        block_2_left_label_top   = "Andy";
+        block_2_right_label_top  = "Mike";
 
         block_3_left_label_bottom  = "<b>Other</b>-related words";
         block_3_right_label_bottom = "<b>Self</b>-related words";
-        block_3_left_label_top   = color_yellow+" group";
-        block_3_right_label_top  = color_blue+" group";
+        block_3_left_label_top   = "Mike";
+        block_3_right_label_top  = "Andy";
 
         block_4_left_label_bottom  = "<b>Other</b>-related words";
         block_4_right_label_bottom = "<b>Self</b>-related words";
-        block_4_left_label_top   = color_yellow+" group";
-        block_4_right_label_top  = color_blue+" group";
+        block_4_left_label_top   = "Mike";
+        block_4_right_label_top  = "Andy";
     break;
 
-  case "blue_right":
+  case "Andy_right":
         self_side_1st           = "right";
         other_side_1st          = "left";
-        blue_side_1st           = "right";
-        yellow_side_1st         = "left";
+        Andy_side_1st           = "right";
+        Mike_side_1st         = "left";
 
         self_side_2nd           = "left";
         other_side_2nd          = "right";
-        blue_side_2nd           = "left";
-        yellow_side_2nd         = "right";
+        Andy_side_2nd           = "left";
+        Mike_side_2nd         = "right";
 
         block_1_left_label_bottom  = "<b>Other</b>-related words";
         block_1_right_label_bottom = "<b>Self</b>-related words";
-        block_1_left_label_top   = color_yellow+" group";
-        block_1_right_label_top  = color_blue+" group";
+        block_1_left_label_top   = "Mike";
+        block_1_right_label_top  = "Andy";
 
         block_2_left_label_bottom  = "<b>Other</b>-related words";
         block_2_right_label_bottom = "<b>Self</b>-related words";
-        block_2_left_label_top   = color_yellow+" group";
-        block_2_right_label_top  = color_blue+" group";
+        block_2_left_label_top   = "Mike";
+        block_2_right_label_top  = "Andy";
 
         block_3_left_label_bottom  = "<b>Self</b>-related words";
         block_3_right_label_bottom = "<b>Other</b>-related words";
-        block_3_left_label_top   = color_blue+" group";
-        block_3_right_label_top  = color_yellow+" group";
+        block_3_left_label_top   = "Andy";
+        block_3_right_label_top  = "Mike";
 
         block_4_left_label_bottom  = "<b>Self</b>-related words";
         block_4_right_label_bottom = "<b>Other</b>-related words";
-        block_4_left_label_top   = color_blue+" group";
-        block_4_right_label_top  = color_yellow+" group";
+        block_4_left_label_top   = "Andy";
+        block_4_right_label_top  = "Mike";
     break;
-  case "yellow_left":
+  case "Mike_left":
         self_side_1st               = "left";
         other_side_1st              = "right";
-        blue_side_1st               = "right";
-        yellow_side_1st             = "left";
+        Andy_side_1st               = "right";
+        Mike_side_1st             = "left";
 
         self_side_2nd               = "right";
         other_side_2nd              = "left";
-        blue_side_2nd               = "left";
-        yellow_side_2nd             = "right";
+        Andy_side_2nd               = "left";
+        Mike_side_2nd             = "right";
 
         block_1_left_label_bottom  = "<b>Self</b>-related words";
         block_1_right_label_bottom = "<b>Other</b>-related words";
-        block_1_left_label_top   = color_yellow+" group";
-        block_1_right_label_top  = color_blue+" group";
+        block_1_left_label_top   = "Mike";
+        block_1_right_label_top  = "Andy";
 
         block_2_left_label_bottom  = "<b>Self</b>-related words";
         block_2_right_label_bottom = "<b>Other</b>-related words";
-        block_2_left_label_top   = color_yellow+" group";
-        block_2_right_label_top  = color_blue+" group";
+        block_2_left_label_top   = "Mike";
+        block_2_right_label_top  = "Andy";
 
         block_3_left_label_bottom  = "<b>Other</b>-related words";
         block_3_right_label_bottom = "<b>Self</b>-related words";
-        block_3_left_label_top   = color_blue+" group";
-        block_3_right_label_top  = color_yellow+" group";
+        block_3_left_label_top   = "Andy";
+        block_3_right_label_top  = "Mike";
 
         block_4_left_label_bottom  = "<b>Other</b>-related words";
         block_4_right_label_bottom = "<b>Self</b>-related words";
-        block_4_left_label_top   = color_blue+" group";
-        block_4_right_label_top  = color_yellow+" group";
+        block_4_left_label_top   = "Andy";
+        block_4_right_label_top  = "Mike";
     break;
 
-  case "yellow_right":
+  case "Mike_right":
         self_side_1st               = "right";
         other_side_1st              = "left";
-        blue_side_1st               = "left";
-        yellow_side_1st             = "right";
+        Andy_side_1st               = "left";
+        Mike_side_1st             = "right";
 
         self_side_2nd               = "left";
         other_side_2nd              = "right";
-        blue_side_2nd               = "right";
-        yellow_side_2nd             = "left";
+        Andy_side_2nd               = "right";
+        Mike_side_2nd             = "left";
 
 
         block_1_left_label_bottom  = "<b>Other</b>-related words";
         block_1_right_label_bottom = "<b>Self</b>-related words";
-        block_1_left_label_top   = color_blue+" group";
+        block_1_left_label_top   = "Andy";
         block_1_right_label_top  = color_yellow+" group";
 
         block_2_left_label_bottom  = "<b>Other</b>-related words";
         block_2_right_label_bottom = "<b>Self</b>-related words";
-        block_2_left_label_top   = color_blue+" group";
+        block_2_left_label_top   = "Andy";
         block_2_right_label_top  = color_yellow+" group";
 
         block_3_left_label_bottom  = "<b>Self</b>-related words";
         block_3_right_label_bottom = "<b>Other</b>-related words";
         block_3_left_label_top   = color_yellow+" group";
-        block_3_right_label_top  = color_blue+" group";
+        block_3_right_label_top  = "Andy";
 
         block_4_left_label_bottom  = "<b>Self</b>-related words";
         block_4_right_label_bottom = "<b>Other</b>-related words";
         block_4_left_label_top   = color_yellow+" group";
-        block_4_right_label_top  = color_blue+" group";
+        block_4_right_label_top  = "Andy";
     break;
 }
 
@@ -609,7 +573,7 @@ var iat_instructions_1 = {
     " into groups as accurately as you can using the keyboard. In the following screen you will be presented" +
     " a list of category labels and the items that belong to each of these categories." +
     "</p>" +
-    "<p class='instructions'>As you will see, you will sort pictures of faces depending on whether they have a "+color_blue+" or a "+color_yellow+" background" +
+    "<p class='instructions'>As you will see, you will sort the picture of two individuals, Andy and Mike," +
     " and words depending on whether they refer to the <b>self</b> or to <b>others.</b></p>" +
     "<h3 class='instructions'>Instructions</h3>" +
     "<ul class='instructions'>" +
@@ -623,12 +587,12 @@ var iat_instructions_1 = {
   choices: [32]
 };
 
-var iat_instructions_1_G1B = {
+var iat_instructions_1_45_Andy = {
   type: "html-keyboard-response",
   post_trial_gap: 200,
   stimulus:
     "<h1 class ='custom-title'> Part 2: Categorization task </h1>" +
-    "<p class='instructions'><center>Here are the three categories and the items belonging to each category</center></p>" +
+    "<p class='instructions'><center>Here are the four categories and the items belonging to each category</center></p>" +
     "<table>" +
       "<tr>" +
         "<th width='200px'><p font:80>CATEGORY</p></th>" +
@@ -652,30 +616,16 @@ var iat_instructions_1_G1B = {
         "<td align='left'>he </td>" +
       "</tr>" +
       "<tr>" +
-        "<td>Faces of the "+color_yellow+" <br>group:</td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face19_J.png'></td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face28_J.png'></td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face55_J.png'></td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face95_J.png'></td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face104_J.png'></td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face115_J.png'></td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face119_J.png'></td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face142_J.png'></td>" +
+        "<td>Andy:</td>" +
+        "<td align='left'><img height = 70px src='stimuli/Face_45_Andy.jpeg'></td>" +
       "</tr>" +
       "<tr>" +
-        "<td>Faces of the "+color_blue+" <br>group:</td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face10_B.png'></td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face16_B.png'></td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face17_B.png'></td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face45_B.png'></td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face85_B.png'></td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face103_B.png'></td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face116_B.png'></td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face132_B.png'></td>" +
+        "<td>Mike:</td>" +
+        "<td align='left'><img height = 70px src='stimuli/Face_55_Mike.jpeg'></td>" +
       "</tr>" +
     "</table>" +
     "<br>" +
-    "<p class='instructions'><center>You will perform four categorization blocks of 26 trials each.</center></p>" +
+    "<p class='instructions'><center>You will perform four categorization blocks of 40 trials each.</center></p>" +
     "<br>" +
     "<p class = 'continue-instructions'>Press <span class='key'>space</span>" +
     " to continue.</p>",
@@ -683,12 +633,12 @@ var iat_instructions_1_G1B = {
 };
 
 
-var iat_instructions_1_G1Y = {
+var iat_instructions_1_55_Andy = {
   type: "html-keyboard-response",
   post_trial_gap: 200,
   stimulus:
     "<h1 class ='custom-title'> Part 2: Categorization task </h1>" +
-    "<p class='instructions'><center>Here are the three categories and the items belonging to each category</center></p>" +
+    "<p class='instructions'><center>Here are the four categories and the items belonging to each category</center></p>" +
     "<table>" +
       "<tr>" +
         "<th width='200px'><p font:80>CATEGORY</p></th>" +
@@ -712,30 +662,16 @@ var iat_instructions_1_G1Y = {
         "<td align='left'>he </td>" +
       "</tr>" +
       "<tr>" +
-        "<td>Faces of the "+color_yellow+" <br>group:</td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face10_J.png'></td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face16_J.png'></td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face17_J.png'></td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face45_J.png'></td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face85_J.png'></td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face103_J.png'></td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face116_J.png'></td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face132_J.png'></td>" +
+        "<td>Andy:</td>" +
+        "<td align='left'><img height = 70px src='stimuli/Face_55_Andy.jpeg'></td>" +
       "</tr>" +
       "<tr>" +
-        "<td>Faces of the "+color_blue+" <br>group:</td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face19_B.png'></td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face28_B.png'></td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face55_B.png'></td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face95_B.png'></td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face104_B.png'></td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face115_B.png'></td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face119_B.png'></td>" +
-        "<td align='left'><img height = 70px src='stimuli/Face142_B.png'></td>" +
+        "<td>Mike:</td>" +
+        "<td align='left'><img height = 70px src='stimuli/Face_45_Mike.jpeg'></td>" +
       "</tr>" +
     "</table>" +
     "<br>" +
-    "<p class='instructions'><center>You will perform four categorization blocks of 52 trials each.</center></p>" +
+    "<p class='instructions'><center>You will perform four categorization blocks of 40 trials each.</center></p>" +
     "<br>" +
     "<p class = 'continue-instructions'>Press <span class='key'>space</span>" +
     " to continue.</p>",
@@ -882,7 +818,7 @@ var iat_instructions_block_4 = {
 
 //Good-looking, Pretty, Handsome, Gorgeous</td>" +
 
-var iat_stim_block_1_2_G1B = [
+var iat_stim_block_1_2_Face_45_Andy = [
   {type: 'iat-html', category: "self_other",      stimulus: "me",                  stim_key_association: self_side_1st},
   {type: 'iat-html', category: "self_other",      stimulus: "mine",                stim_key_association: self_side_1st},
   {type: 'iat-html', category: "self_other",      stimulus: "I",                   stim_key_association: self_side_1st},
@@ -893,51 +829,19 @@ var iat_stim_block_1_2_G1B = [
   {type: 'iat-html', category: "self_other",      stimulus: "their",               stim_key_association: other_side_1st},
   {type: 'iat-html', category: "self_other",      stimulus: "she",                 stim_key_association: other_side_1st},
   {type: 'iat-html', category: "self_other",      stimulus: "he",                  stim_key_association: other_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face10_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face16_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face17_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face45_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face85_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face103_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face116_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face132_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face19_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face28_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face55_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face95_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face104_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face115_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face119_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face142_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-html', category: "self_other",      stimulus: "me",                  stim_key_association: self_side_1st},
-  {type: 'iat-html', category: "self_other",      stimulus: "mine",                stim_key_association: self_side_1st},
-  {type: 'iat-html', category: "self_other",      stimulus: "I",                   stim_key_association: self_side_1st},
-  {type: 'iat-html', category: "self_other",      stimulus: "myself",              stim_key_association: self_side_1st},
-  {type: 'iat-html', category: "self_other",      stimulus: "my",                  stim_key_association: self_side_1st},
-  {type: 'iat-html', category: "self_other",      stimulus: "others",              stim_key_association: other_side_1st},
-  {type: 'iat-html', category: "self_other",      stimulus: "they",                stim_key_association: other_side_1st},
-  {type: 'iat-html', category: "self_other",      stimulus: "their",               stim_key_association: other_side_1st},
-  {type: 'iat-html', category: "self_other",      stimulus: "she",                 stim_key_association: other_side_1st},
-  {type: 'iat-html', category: "self_other",      stimulus: "he",                  stim_key_association: other_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face10_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face16_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face17_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face45_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face85_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face103_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face116_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face132_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face19_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face28_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face55_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face95_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face104_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face115_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face119_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face142_J.png',            stim_key_association: yellow_side_1st}
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45_Andy.jpeg',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45_Andy.jpeg',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45_Andy.jpeg',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45_Andy.jpeg',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45_Andy.jpeg',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Mike.jpeg',              stim_key_association: Mike_side_1st},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Mike.jpeg',              stim_key_association: Mike_side_1st},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Mike.jpeg',              stim_key_association: Mike_side_1st},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Mike.jpeg',              stim_key_association: Mike_side_1st},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Mike.jpeg',              stim_key_association: Mike_side_1st}
 ]
 
-var iat_stim_block_1_2_G1Y = [
+var iat_stim_block_1_2_Face_55_Andy = [
   {type: 'iat-html', category: "self_other",      stimulus: "me",                  stim_key_association: self_side_1st},
   {type: 'iat-html', category: "self_other",      stimulus: "mine",                stim_key_association: self_side_1st},
   {type: 'iat-html', category: "self_other",      stimulus: "I",                   stim_key_association: self_side_1st},
@@ -948,51 +852,19 @@ var iat_stim_block_1_2_G1Y = [
   {type: 'iat-html', category: "self_other",      stimulus: "their",               stim_key_association: other_side_1st},
   {type: 'iat-html', category: "self_other",      stimulus: "she",                 stim_key_association: other_side_1st},
   {type: 'iat-html', category: "self_other",      stimulus: "he",                  stim_key_association: other_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face19_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face28_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face55_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face95_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face104_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face115_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face119_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face142_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face10_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face16_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face17_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face45_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face85_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face103_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face116_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face132_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-html', category: "self_other",      stimulus: "me",                  stim_key_association: self_side_1st},
-  {type: 'iat-html', category: "self_other",      stimulus: "mine",                stim_key_association: self_side_1st},
-  {type: 'iat-html', category: "self_other",      stimulus: "I",                   stim_key_association: self_side_1st},
-  {type: 'iat-html', category: "self_other",      stimulus: "myself",              stim_key_association: self_side_1st},
-  {type: 'iat-html', category: "self_other",      stimulus: "my",                  stim_key_association: self_side_1st},
-  {type: 'iat-html', category: "self_other",      stimulus: "others",              stim_key_association: other_side_1st},
-  {type: 'iat-html', category: "self_other",      stimulus: "they",                stim_key_association: other_side_1st},
-  {type: 'iat-html', category: "self_other",      stimulus: "their",               stim_key_association: other_side_1st},
-  {type: 'iat-html', category: "self_other",      stimulus: "she",                 stim_key_association: other_side_1st},
-  {type: 'iat-html', category: "self_other",      stimulus: "he",                  stim_key_association: other_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face19_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face28_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face55_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face95_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face104_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face115_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face119_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face142_B.png',              stim_key_association: blue_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face10_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face16_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face17_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face45_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face85_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face103_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face116_J.png',            stim_key_association: yellow_side_1st},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face132_J.png',            stim_key_association: yellow_side_1st}
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Andy.jpeg',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Andy.jpeg',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Andy.jpeg',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Andy.jpeg',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Andy.jpeg',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45_Mike.jpeg',              stim_key_association: Mike_side_1st},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45_Mike.jpeg',              stim_key_association: Mike_side_1st},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45_Mike.jpeg',              stim_key_association: Mike_side_1st},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45_Mike.jpeg',              stim_key_association: Mike_side_1st},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45_Mike.jpeg',              stim_key_association: Mike_side_1st}
 ]
 
-var iat_stim_block_3_4_G1B = [
+var iat_stim_block_3_4_Face_45_Andy = [
   {type: 'iat-html', category: "self_other",      stimulus: "me",                  stim_key_association: self_side_2nd},
   {type: 'iat-html', category: "self_other",      stimulus: "mine",                stim_key_association: self_side_2nd},
   {type: 'iat-html', category: "self_other",      stimulus: "I",                   stim_key_association: self_side_2nd},
@@ -1003,51 +875,19 @@ var iat_stim_block_3_4_G1B = [
   {type: 'iat-html', category: "self_other",      stimulus: "their",               stim_key_association: other_side_2nd},
   {type: 'iat-html', category: "self_other",      stimulus: "she",                 stim_key_association: other_side_2nd},
   {type: 'iat-html', category: "self_other",      stimulus: "he",                  stim_key_association: other_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face10_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face16_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face17_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face45_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face85_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face103_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face116_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face132_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face19_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face28_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face55_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face95_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face104_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face115_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face119_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face142_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-html', category: "self_other",      stimulus: "me",                  stim_key_association: self_side_2nd},
-  {type: 'iat-html', category: "self_other",      stimulus: "mine",                stim_key_association: self_side_2nd},
-  {type: 'iat-html', category: "self_other",      stimulus: "I",                   stim_key_association: self_side_2nd},
-  {type: 'iat-html', category: "self_other",      stimulus: "myself",              stim_key_association: self_side_2nd},
-  {type: 'iat-html', category: "self_other",      stimulus: "my",                  stim_key_association: self_side_2nd},
-  {type: 'iat-html', category: "self_other",      stimulus: "others",              stim_key_association: other_side_2nd},
-  {type: 'iat-html', category: "self_other",      stimulus: "they",                stim_key_association: other_side_2nd},
-  {type: 'iat-html', category: "self_other",      stimulus: "their",               stim_key_association: other_side_2nd},
-  {type: 'iat-html', category: "self_other",      stimulus: "she",                 stim_key_association: other_side_2nd},
-  {type: 'iat-html', category: "self_other",      stimulus: "he",                  stim_key_association: other_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face10_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face16_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face17_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face45_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face85_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face103_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face116_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face132_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face19_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face28_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face55_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face95_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face104_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face115_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face119_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face142_J.png',            stim_key_association: yellow_side_2nd}
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45_Andy.jpeg',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45_Andy.jpeg',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45_Andy.jpeg',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45_Andy.jpeg',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45_Andy.jpeg',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Mike.jpeg',              stim_key_association: Mike_side_2nd},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Mike.jpeg',              stim_key_association: Mike_side_2nd},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Mike.jpeg',              stim_key_association: Mike_side_2nd},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Mike.jpeg',              stim_key_association: Mike_side_2nd},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Mike.jpeg',              stim_key_association: Mike_side_2nd}
 ]
 
-var iat_stim_block_3_4_G1Y = [
+var iat_stim_block_3_4_Face_55_Andy = [
   {type: 'iat-html', category: "self_other",      stimulus: "me",                  stim_key_association: self_side_2nd},
   {type: 'iat-html', category: "self_other",      stimulus: "mine",                stim_key_association: self_side_2nd},
   {type: 'iat-html', category: "self_other",      stimulus: "I",                   stim_key_association: self_side_2nd},
@@ -1058,58 +898,26 @@ var iat_stim_block_3_4_G1Y = [
   {type: 'iat-html', category: "self_other",      stimulus: "their",               stim_key_association: other_side_2nd},
   {type: 'iat-html', category: "self_other",      stimulus: "she",                 stim_key_association: other_side_2nd},
   {type: 'iat-html', category: "self_other",      stimulus: "he",                  stim_key_association: other_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face19_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face28_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face55_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face95_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face104_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face115_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face119_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face142_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face10_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face16_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face17_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face45_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face85_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face103_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face116_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face132_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-html', category: "self_other",      stimulus: "me",                  stim_key_association: self_side_2nd},
-  {type: 'iat-html', category: "self_other",      stimulus: "mine",                stim_key_association: self_side_2nd},
-  {type: 'iat-html', category: "self_other",      stimulus: "I",                   stim_key_association: self_side_2nd},
-  {type: 'iat-html', category: "self_other",      stimulus: "myself",              stim_key_association: self_side_2nd},
-  {type: 'iat-html', category: "self_other",      stimulus: "my",                  stim_key_association: self_side_2nd},
-  {type: 'iat-html', category: "self_other",      stimulus: "others",              stim_key_association: other_side_2nd},
-  {type: 'iat-html', category: "self_other",      stimulus: "they",                stim_key_association: other_side_2nd},
-  {type: 'iat-html', category: "self_other",      stimulus: "their",               stim_key_association: other_side_2nd},
-  {type: 'iat-html', category: "self_other",      stimulus: "she",                 stim_key_association: other_side_2nd},
-  {type: 'iat-html', category: "self_other",      stimulus: "he",                  stim_key_association: other_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face19_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face28_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face55_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face95_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face104_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face115_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face119_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face142_B.png',              stim_key_association: blue_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face10_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face16_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face17_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face45_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face85_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face103_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face116_J.png',            stim_key_association: yellow_side_2nd},
-  {type: 'iat-image', category: "blue_yellow", stimulus: 'stimuli/Face132_J.png',            stim_key_association: yellow_side_2nd}
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Andy.jpeg',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Andy.jpeg',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Andy.jpeg',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Andy.jpeg',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Andy.jpeg',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45_Mike.jpeg',              stim_key_association: Mike_side_2nd},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45_Mike.jpeg',              stim_key_association: Mike_side_2nd},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45_Mike.jpeg',              stim_key_association: Mike_side_2nd},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45_Mike.jpeg',              stim_key_association: Mike_side_2nd},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45_Mike.jpeg',              stim_key_association: Mike_side_2nd}
 ]
 
 // iat - block 3 (test) -----------------------------------------------------------------orginally 74 trials over 8 stim
-var iat_block_1_G1B = {
+var iat_block_1_Face_45_Andy = {
   timeline: [
     {
       type: jsPsych.timelineVariable('type'),
       stimulus: jsPsych.timelineVariable('stimulus'),
       category: jsPsych.timelineVariable('category'),
-      label_category: ['self_other', 'blue_yellow'],
+      label_category: ['self_other', 'andy_mike'],
       stim_key_association: jsPsych.timelineVariable('stim_key_association'),
       html_when_wrong: '<span style="color: red; font-size: 80px">&times;</span>',
       force_correct_key_press: true,
@@ -1126,16 +934,16 @@ var iat_block_1_G1B = {
     },
     save_iat_trial
   ],
-  timeline_variables: shuffleIATstims(iat_stim_block_1_2_G1B)
+  timeline_variables: shuffleIATstims(iat_stim_block_1_2_Face_45_Andy)
 }
 
-var iat_block_2_G1B = {
+var iat_block_2_Face_45_Andy = {
   timeline: [
     {
       type: jsPsych.timelineVariable('type'),
       stimulus: jsPsych.timelineVariable('stimulus'),
       category: jsPsych.timelineVariable('category'),
-      label_category: ['self_other', 'blue_yellow'],
+      label_category: ['self_other', 'andy_mike'],
       stim_key_association: jsPsych.timelineVariable('stim_key_association'),
       html_when_wrong: '<span style="color: red; font-size: 80px">&times;</span>',
       force_correct_key_press: true,
@@ -1152,16 +960,16 @@ var iat_block_2_G1B = {
     },
     save_iat_trial
   ],
-  timeline_variables: shuffleIATstims(iat_stim_block_1_2_G1B)
+  timeline_variables: shuffleIATstims(iat_stim_block_1_2_Face_45_Andy)
 }
 
-var iat_block_3_G1B = {
+var iat_block_3_Face_45_Andy = {
   timeline: [
     {
       type: jsPsych.timelineVariable('type'),
       stimulus: jsPsych.timelineVariable('stimulus'),
       category: jsPsych.timelineVariable('category'),
-      label_category: ['self_other', 'blue_yellow'],
+      label_category: ['self_other', 'andy_mike'],
       stim_key_association: jsPsych.timelineVariable('stim_key_association'),
       html_when_wrong: '<span style="color: red; font-size: 80px">&times;</span>',
       force_correct_key_press: true,
@@ -1178,16 +986,16 @@ var iat_block_3_G1B = {
     },
     save_iat_trial
   ],
-  timeline_variables: shuffleIATstims(iat_stim_block_3_4_G1B)
+  timeline_variables: shuffleIATstims(iat_stim_block_3_4_Face_45_Andy)
 }
 
-var iat_block_4_G1B = {
+var iat_block_4_Face_45_Andy = {
   timeline: [
     {
       type: jsPsych.timelineVariable('type'),
       stimulus: jsPsych.timelineVariable('stimulus'),
       category: jsPsych.timelineVariable('category'),
-      label_category: ['self_other', 'blue_yellow'],
+      label_category: ['self_other', 'andy_mike'],
       stim_key_association: jsPsych.timelineVariable('stim_key_association'),
       html_when_wrong: '<span style="color: red; font-size: 80px">&times;</span>',
       force_correct_key_press: true,
@@ -1204,17 +1012,17 @@ var iat_block_4_G1B = {
     },
     save_iat_trial
   ],
-  timeline_variables: shuffleIATstims(iat_stim_block_3_4_G1B)
+  timeline_variables: shuffleIATstims(iat_stim_block_3_4_Face_45_Andy)
 }
 
 
-var iat_block_1_G1Y = {
+var iat_block_1_Face_55_Andy = {
   timeline: [
     {
       type: jsPsych.timelineVariable('type'),
       stimulus: jsPsych.timelineVariable('stimulus'),
       category: jsPsych.timelineVariable('category'),
-      label_category: ['self_other', 'blue_yellow'],
+      label_category: ['self_other', 'andy_mike'],
       stim_key_association: jsPsych.timelineVariable('stim_key_association'),
       html_when_wrong: '<span style="color: red; font-size: 80px">&times;</span>',
       force_correct_key_press: true,
@@ -1231,42 +1039,16 @@ var iat_block_1_G1Y = {
     },
     save_iat_trial
   ],
-  timeline_variables: shuffleIATstims(iat_stim_block_1_2_G1Y)
+  timeline_variables: shuffleIATstims(iat_stim_block_1_2_Face_55_Andy)
 }
-/*
-var iat_block_1_G1Y = {
+ 
+var iat_block_2_Face_55_Andy = {
   timeline: [
     {
       type: jsPsych.timelineVariable('type'),
       stimulus: jsPsych.timelineVariable('stimulus'),
       category: jsPsych.timelineVariable('category'),
-      label_category: ['self_other', 'blue_yellow'],
-      stim_key_association: jsPsych.timelineVariable('stim_key_association'),
-      html_when_wrong: '<span style="color: red; font-size: 80px">&times;</span>',
-      force_correct_key_press: true,
-      display_feedback: true,
-      left_category_label:  [block_1_left_label_top, block_1_left_label_bottom],
-      right_category_label: [block_1_right_label_top, block_1_right_label_bottom],
-      response_ends_trial: true,
-      data: {
-        iat_type: 'test',
-        iat_block: 1,
-        iat_label_left:  block_1_left_label_top  + "-" + block_1_left_label_bottom,
-        iat_label_right: block_1_right_label_top + "-" + block_1_right_label_bottom
-         }
-    },
-    save_iat_trial
-  ],
-  timeline_variables: shuffleIATstims(iat_stim_block_1_2_G1Y)
-}
-*/
-var iat_block_2_G1Y = {
-  timeline: [
-    {
-      type: jsPsych.timelineVariable('type'),
-      stimulus: jsPsych.timelineVariable('stimulus'),
-      category: jsPsych.timelineVariable('category'),
-      label_category: ['self_other', 'blue_yellow'],
+      label_category: ['self_other', 'andy_mike'],
       stim_key_association: jsPsych.timelineVariable('stim_key_association'),
       html_when_wrong: '<span style="color: red; font-size: 80px">&times;</span>',
       force_correct_key_press: true,
@@ -1283,16 +1065,16 @@ var iat_block_2_G1Y = {
     },
     save_iat_trial
   ],
-  timeline_variables: shuffleIATstims(iat_stim_block_1_2_G1Y)
+  timeline_variables: shuffleIATstims(iat_stim_block_1_2_Face_55_Andy)
 }
 
-var iat_block_3_G1Y = {
+var iat_block_3_Face_55_Andy = {
   timeline: [
     {
       type: jsPsych.timelineVariable('type'),
       stimulus: jsPsych.timelineVariable('stimulus'),
       category: jsPsych.timelineVariable('category'),
-      label_category: ['self_other', 'blue_yellow'],
+      label_category: ['self_other', 'andy_mike'],
       stim_key_association: jsPsych.timelineVariable('stim_key_association'),
       html_when_wrong: '<span style="color: red; font-size: 80px">&times;</span>',
       force_correct_key_press: true,
@@ -1309,16 +1091,16 @@ var iat_block_3_G1Y = {
     },
     save_iat_trial
   ],
-  timeline_variables: shuffleIATstims(iat_stim_block_3_4_G1Y)
+  timeline_variables: shuffleIATstims(iat_stim_block_3_4_Face_55_Andy)
 }
 
-var iat_block_4_G1Y = {
+var iat_block_4_Face_55_Andy = {
   timeline: [
     {
       type: jsPsych.timelineVariable('type'),
       stimulus: jsPsych.timelineVariable('stimulus'),
       category: jsPsych.timelineVariable('category'),
-      label_category: ['self_other', 'blue_yellow'],
+      label_category: ['self_other', 'andy_mike'],
       stim_key_association: jsPsych.timelineVariable('stim_key_association'),
       html_when_wrong: '<span style="color: red; font-size: 80px">&times;</span>',
       force_correct_key_press: true,
@@ -1335,7 +1117,7 @@ var iat_block_4_G1Y = {
     },
     save_iat_trial
   ],
-  timeline_variables: shuffleIATstims(iat_stim_block_3_4_G1Y)
+  timeline_variables: shuffleIATstims(iat_stim_block_3_4_Face_55_Andy)
 }
 
 //
@@ -1354,13 +1136,12 @@ var Rating_instructions_1 = {
   type: "html-keyboard-response",
   post_trial_gap: 200,
   stimulus:
-    "<h1 class ='custom-title'> Part 3: Rating of the Blue and Yellow groups </h1>" +
-    "<p class='instructions'>You should know that <b>each group of faces</b> that you saw in the categorization task"+
-    " (those with a "+color_blue+" background and those with a "+color_yellow+" background)" +
-    " was in fact <b>very different from the other group. The two groups have very different personality and typically"+
-    " behave in different ways. Moreover, <b>within each group</b>, members share a series of psychological characteristics,"+
-    " making them <b>similar to each other</b>.</b></br></br>"+
-    " Your task is to evaluate members of the blue group and members of the yellow group on the same series of traits as in Part 1."+
+    "<h1 class ='custom-title'> Part 3: Rating of Andy and Mike </h1>" +
+    "<p class='instructions'>You should know that <b>the two persons</b> that you saw in the categorization task"+
+    " (Andy and Mike)" +
+    " are in fact <b>very different from each other. Indeed, Andy and Mike have a very different personality and typically"+
+    " behave in very different ways.</br></br>"+
+    " Your task is to evaluate Andy and Mike on the same series of traits as in Part 1."+
     " It is extremely important that you try to answer <b> as honestly and as spontaneously as possible.</b> There are no good or" +
     " bad answers. You just have to respond <b>as intuitively as possible. </b></br></br>"+
     "</p>" +
@@ -1369,41 +1150,41 @@ var Rating_instructions_1 = {
   choices: [32]
 };
 
-var rating_blue = {
+var rating_Andy = {
         type: 'survey-likert',
         post_trial_gap: 200,
-        preamble: "<br><br><b><i>Members of the "+color_blue+" group...</b></i><br><br>",
+        preamble: "<br><br><b><i>Andy is a person who...</b></i><br><br>",
         questions: [
-          {prompt: "<b>Tend to be quiet.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are compassionate, have a soft heart.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Tend to be disorganized.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Worry a lot.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are fascinated by art, music, or literature.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are dominant, act as leaders.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are sometimes rude to others.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Have difficulty getting started on tasks.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Tend to feel depressed, blue.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Have little interest in abstract ideas.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are full of energy.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Assume the best about people.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are reliable, can always be counted on.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are emotionally stable, not easily upset.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are original, come up with new ideas.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are outgoing, sociable.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Tends to be quiet.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is compassionate, has a soft heart.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Tends to be disorganized.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Worries a lot.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is fascinated by art, music, or literature.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is dominant, acts as a leader.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is sometimes rude to others.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Has difficulty getting started on tasks.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Tends to feel depressed, blue.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Has little interest in abstract ideas.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is full of energy.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Assumes the best about people.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is reliable, can always be counted on.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is emotionally stable, not easily upset.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is original, comes up with new ideas.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is outgoing, sociable.</b>", labels: scale_questionnaire, required: true},
           {prompt: "<b>Can be cold and uncaring.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Keep things neat and tidy.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are relaxed, handle stress well.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Have few artistic interests.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Prefer to have others take charge.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are respectful, treat others with respect.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are persistent, work until the task is finished.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Feel secure, comfortable with themselves.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are complex, deep thinkers.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are less active than other people.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Tend to find fault with others.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Keeps things neat and tidy.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is relaxed, handles stress well.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Has few artistic interests.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Prefers to have others take charge.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is respectful, treats others with respect.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is persistent, works until the task is finished.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Feels secure, comfortable with self.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is complex, a deep thinker.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is less active than other people.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Tends to find fault with others.</b>", labels: scale_questionnaire, required: true},
           {prompt: "<b>Can be somewhat careless.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are temperamental, get emotional easily.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Have little creativity.</b>", labels: scale_questionnaire, required: true}
+          {prompt: "<b>Is temperamental, gets emotional easily.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Has little creativity.</b>", labels: scale_questionnaire, required: true}
         ],
         randomize_question_order: false, 
         button_label: 'Continue',
@@ -1453,45 +1234,45 @@ var rating_blue = {
           data.Personality_28     = parsed_response.Q27 ;
           data.Personality_29     = parsed_response.Q28 ;
           data.Personality_30     = parsed_response.Q29 ;
-          data.target_rating    = "blue group";
+          data.target_rating    = "Andy";
         },
     };
 
-var rating_yellow = {
+var rating_Mike = {
         type: 'survey-likert',
         post_trial_gap: 200,
-        preamble: "<br><br><b><i>Members of the "+color_yellow+" group...</b></i><br><br>",
+        preamble: "<br><br><b><i>Mike is a person who..</b></i><br><br>",
         questions: [
-          {prompt: "<b>Tend to be quiet.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are compassionate, have a soft heart.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Tend to be disorganized.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Worry a lot.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are fascinated by art, music, or literature.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are dominant, act as leaders.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are sometimes rude to others.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Have difficulty getting started on tasks.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Tend to feel depressed, blue.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Have little interest in abstract ideas.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are full of energy.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Assume the best about people.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are reliable, can always be counted on.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are emotionally stable, not easily upset.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are original, come up with new ideas.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are outgoing, sociable.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Tends to be quiet.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is compassionate, has a soft heart.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Tends to be disorganized.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Worries a lot.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is fascinated by art, music, or literature.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is dominant, acts as a leader.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is sometimes rude to others.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Has difficulty getting started on tasks.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Tends to feel depressed, blue.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Has little interest in abstract ideas.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is full of energy.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Assumes the best about people.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is reliable, can always be counted on.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is emotionally stable, not easily upset.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is original, comes up with new ideas.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is outgoing, sociable.</b>", labels: scale_questionnaire, required: true},
           {prompt: "<b>Can be cold and uncaring.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Keep things neat and tidy.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are relaxed, handle stress well.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Have few artistic interests.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Prefer to have others take charge.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are respectful, treat others with respect.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are persistent, work until the task is finished.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Feel secure, comfortable with themselves.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are complex, deep thinkers.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are less active than other people.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Tend to find fault with others.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Keeps things neat and tidy.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is relaxed, handles stress well.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Has few artistic interests.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Prefers to have others take charge.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is respectful, treats others with respect.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is persistent, works until the task is finished.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Feels secure, comfortable with self.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is complex, a deep thinker.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Is less active than other people.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Tends to find fault with others.</b>", labels: scale_questionnaire, required: true},
           {prompt: "<b>Can be somewhat careless.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Are temperamental, get emotional easily.</b>", labels: scale_questionnaire, required: true},
-          {prompt: "<b>Have little creativity.</b>", labels: scale_questionnaire, required: true}
+          {prompt: "<b>Is temperamental, gets emotional easily.</b>", labels: scale_questionnaire, required: true},
+          {prompt: "<b>Has little creativity.</b>", labels: scale_questionnaire, required: true}
         ],
         randomize_question_order: false, 
         button_label: 'Continue',
@@ -1541,7 +1322,7 @@ var rating_yellow = {
           data.Personality_28     = parsed_response.Q27 ;
           data.Personality_29     = parsed_response.Q28 ;
           data.Personality_30     = parsed_response.Q29 ;
-          data.target_rating    = "yellow group";
+          data.target_rating    = "Mike";
         },
     };
 
