@@ -632,7 +632,7 @@ var iat_instructions_1_45_Andy = {
         "<td align='left'>he</td>"+
       "</tr>" +
       "<tr>" +
-        "<td>Andy:</td>" +
+        "<td>Andy:<br>(same picture, different fonts)</td>" +
         "<td align='left'><img height = 100px src='stimuli/Face_45_Andy_1.jpeg'></td>" +
         "<td align='left'><img height = 100px src='stimuli/Face_45_Andy_2.jpeg'></td>" +
         "<td align='left'><img height = 100px src='stimuli/Face_45_Andy_3.jpeg'></td>" +
@@ -640,7 +640,7 @@ var iat_instructions_1_45_Andy = {
         "<td align='left'><img height = 100px src='stimuli/Face_45_Andy_5.jpeg'></td>" +
       "</tr>" +
       "<tr>" +
-        "<td>Mike:</td>" +
+        "<td>Mike:<br>(same picture, different fonts)</td>" +
         "<td align='left'><img height = 100px src='stimuli/Face_55_Mike_1.jpeg'></td>" +
         "<td align='left'><img height = 100px src='stimuli/Face_55_Mike_2.jpeg'></td>" +
         "<td align='left'><img height = 100px src='stimuli/Face_55_Mike_3.jpeg'></td>" +
@@ -686,7 +686,7 @@ var iat_instructions_1_55_Andy = {
         "<td align='left'>he</td>"+
       "</tr>" +
       "<tr>" +
-        "<td>Andy:</td>" +
+        "<td>Andy: <br>(same picture, different fonts)</td>" +
         "<td align='left'><img height = 100px src='stimuli/Face_55_Andy_1.jpeg'></td>" +
         "<td align='left'><img height = 100px src='stimuli/Face_55_Andy_2.jpeg'></td>" +
         "<td align='left'><img height = 100px src='stimuli/Face_55_Andy_3.jpeg'></td>" +
@@ -694,7 +694,7 @@ var iat_instructions_1_55_Andy = {
         "<td align='left'><img height = 100px src='stimuli/Face_55_Andy_5.jpeg'></td>" +
       "</tr>" +
       "<tr>" +
-        "<td>Mike:</td>" +
+        "<td>Mike:<br>(same picture, different fonts)</td>" +
         "<td align='left'><img height = 100px src='stimuli/Face_45_Mike_1.jpeg'></td>" +
         "<td align='left'><img height = 100px src='stimuli/Face_45_Mike_2.jpeg'></td>" +
         "<td align='left'><img height = 100px src='stimuli/Face_45_Mike_3.jpeg'></td>" +
@@ -866,7 +866,7 @@ var iat_stim_block_1_2_Face_45_Andy = [
   {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45_Andy_3.jpeg',              stim_key_association: Andy_side_1st},
   {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45_Andy_4.jpeg',              stim_key_association: Andy_side_1st},
   {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45_Andy_5.jpeg',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Mike_1jpeg',              stim_key_association: Mike_side_1st},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Mike_1.jpeg',              stim_key_association: Mike_side_1st},
   {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Mike_2.jpeg',              stim_key_association: Mike_side_1st},
   {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Mike_3.jpeg',              stim_key_association: Mike_side_1st},
   {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Mike_4.jpeg',              stim_key_association: Mike_side_1st},
@@ -886,7 +886,7 @@ var iat_stim_block_1_2_Face_45_Andy = [
   {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45_Andy_3.jpeg',              stim_key_association: Andy_side_1st},
   {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45_Andy_4.jpeg',              stim_key_association: Andy_side_1st},
   {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45_Andy_5.jpeg',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Mike_1jpeg',              stim_key_association: Mike_side_1st},
+  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Mike_1.jpeg',              stim_key_association: Mike_side_1st},
   {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Mike_2.jpeg',              stim_key_association: Mike_side_1st},
   {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Mike_3.jpeg',              stim_key_association: Mike_side_1st},
   {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55_Mike_4.jpeg',              stim_key_association: Mike_side_1st},
