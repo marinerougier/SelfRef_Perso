@@ -108,29 +108,12 @@ var showing_cursor = {
 }
 
 // Preload faces
-var stim = [
+var faces = [
       "stimuli/Face_45.png",
-      "stimuli/Face_55.png",
-      "stimuli/Andy_1.jpeg",
-      "stimuli/Andy_2.jpeg",
-      "stimuli/Andy_3.jpeg",
-      "stimuli/Andy_4.jpeg",
-      "stimuli/Mike_1.jpeg",
-      "stimuli/Mike_2.jpeg",
-      "stimuli/Mike_3.jpeg",
-      "stimuli/Mike_4.jpeg",
-      "stimuli/Andy_1_instr.jpeg",
-      "stimuli/Andy_2_instr.jpeg",
-      "stimuli/Andy_3_instr.jpeg",
-      "stimuli/Andy_4_instr.jpeg",
-      "stimuli/Mike_1_instr.jpeg",
-      "stimuli/Mike_2_instr.jpeg",
-      "stimuli/Mike_3_instr.jpeg",
-      "stimuli/Mike_4_instr.jpeg"
+      "stimuli/Face_55.png"
 ];
 
-
-preloadimages.push(stim);
+preloadimages.push(faces);
 
 
 // Saving blocks ------------------------------------------------------------------------
@@ -579,11 +562,11 @@ var iat_instructions_1 = {
   post_trial_gap: 200,
   stimulus:
     "<h1 class ='custom-title'> Part 2: Categorization task </h1>" +
-    "<p class='instructions'>In this task, you will be asked to categorize words, pictures and names" +
+    "<p class='instructions'>In this task, you will be asked to categorize pictures and words" +
     " as accurately as you can using the keyboard. In the following screen you will be presented" +
     " a list of category labels and the items that belong to each of these categories." +
     "</p>" +
-    "<p class='instructions'>As you will see, you will sort the pictures and names of two individuals, Andy and Mike," +
+    "<p class='instructions'>As you will see, you will sort the pictures of two individuals, Andy and Mike," +
     " and words depending on whether they refer to the <b>self</b> or to <b>others.</b></p>" +
     "<h3 class='instructions'>Instructions</h3>" +
     "<ul class='instructions'>" +
@@ -611,31 +594,35 @@ var iat_instructions_1_45_Andy = {
       "<br>" +
       "<tr>" +
         "<td><b>Self</b>-related words:</td>" +
-        "<td align='left'>me, &nbsp&nbsp&nbsp&nbsp&nbsp&nbspmine, &nbsp&nbsp&nbsp&nbsp&nbsp&nbspI, &nbsp&nbsp&nbsp&nbsp&nbsp&nbspmyself, &nbsp&nbsp&nbsp&nbsp&nbsp&nbspmy</td>"+
+        "<td align='left'>me</td>"+
+        "<td align='left'>mine</td>"+
+        "<td align='left'>I</td>"+
+        "<td align='left'>myself</td>"+
+        "<td align='left'>my</td>"+
       "</tr>" +
       "<tr>" +
         "<td><b>Other</b>-related words:</td>" +
-        "<td align='left'>others, &nbsp&nbsp&nbsp&nbsp&nbsp&nbspthey, &nbsp&nbsp&nbsp&nbsp&nbsp&nbsptheir, &nbsp&nbsp&nbsp&nbsp&nbsp&nbspshe, &nbsp&nbsp&nbsp&nbsp&nbsp&nbsphe</td>"+
+        "<td align='left'>others</td>"+
+        "<td align='left'>they</td>"+
+        "<td align='left'>their</td>"+
+        "<td align='left'>she</td>"+
+        "<td align='left'>he</td>"+
       "</tr>" +
       "<tr>" +
-        "<td>Andy:<br>(face picture and name in different fonts)</td>" +
-        "<td align='left'><img height = 100px src='stimuli/Face_45.png'>" +
-        "<img height = 50px src='stimuli/Andy_1_instr.jpeg'>" +
-        "<img height = 50px src='stimuli/Andy_2_instr.jpeg'>" +
-        "<img height = 50px src='stimuli/Andy_3_instr.jpeg'>" +
-        "<img height = 50px src='stimuli/Andy_4_instr.jpeg'></td>" +
+        "<td>Andy:<br>(same picture, different fonts)</td>" +
+        "<td align='left'><img height = 100px src='stimuli/Face_45.png'></td>" +
+        "<td font-family: 'Times New Roman'>Andy</td>"+
+        "<td align='left'>Andy</td>"+
+
       "</tr>" +
       "<tr>" +
-        "<td>Mike:<br>(face picture and name in different fonts)</td>" +
-        "<td align='left'><img height = 100px src='stimuli/Face_55.png'>" +
-        "<img height = 50px src='stimuli/Mike_1_instr.jpeg'>" +
-        "<img height = 50px src='stimuli/Mike_2_instr.jpeg'>" +
-        "<img height = 50px src='stimuli/Mike_3_instr.jpeg'>" +
-        "<img height = 50px src='stimuli/Mike_4_instr.jpeg'></td>" +
+        "<td>Mike:<br>(same picture, different fonts)</td>" +
+        "<td align='left'><img height = 100px src='stimuli/Face_55.png'></td>" +
+        "<td align='left'>Mike</td>"+
       "</tr>" +
     "</table>" +
     "<br>" +
-    "<p class='instructions'><center>You will perform four categorization blocks of 52 trials each.</center></p>" +
+    "<p class='instructions'><center>You will perform four categorization blocks of 40 trials each.</center></p>" +
     "<br>" +
     "<p class = 'continue-instructions'>Press <span class='key'>space</span>" +
     " to continue.</p>",
@@ -657,31 +644,34 @@ var iat_instructions_1_55_Andy = {
       "<br>" +
       "<tr>" +
         "<td><b>Self</b>-related words:</td>" +
-        "<td align='left'>me, &nbsp&nbsp&nbsp&nbsp&nbsp&nbspmine, &nbsp&nbsp&nbsp&nbsp&nbsp&nbspI, &nbsp&nbsp&nbsp&nbsp&nbsp&nbspmyself, &nbsp&nbsp&nbsp&nbsp&nbsp&nbspmy</td>"+
+        "<td align='left'>me</td>"+
+        "<td align='left'>mine</td>"+
+        "<td align='left'>I</td>"+
+        "<td align='left'>myself</td>"+
+        "<td align='left'>my</td>"+
       "</tr>" +
       "<tr>" +
         "<td><b>Other</b>-related words:</td>" +
-        "<td align='left'>others, &nbsp&nbsp&nbsp&nbsp&nbsp&nbspthey, &nbsp&nbsp&nbsp&nbsp&nbsp&nbsptheir, &nbsp&nbsp&nbsp&nbsp&nbsp&nbspshe, &nbsp&nbsp&nbsp&nbsp&nbsp&nbsphe</td>"+
+        "<td align='left'>others</td>"+
+        "<td align='left'>they</td>"+
+        "<td align='left'>their</td>"+
+        "<td align='left'>she</td>"+
+        "<td align='left'>he</td>"+
       "</tr>" +
       "<tr>" +
-        "<td>Andy:<br>(face picture and name in different fonts)</td>" +
-        "<td align='left'><img height = 100px src='stimuli/Face_55.png'>" +
-        "<img height = 50px src='stimuli/Andy_1_instr.jpeg'>" +
-        "<img height = 50px src='stimuli/Andy_2_instr.jpeg'>" +
-        "<img height = 50px src='stimuli/Andy_3_instr.jpeg'>" +
-        "<img height = 50px src='stimuli/Andy_4_instr.jpeg'></td>" +
+        "<td>Andy: <br>(same picture, different fonts)</td>" +
+        "<td align='left'><img height = 100px src='stimuli/Face_55.png'></td>" +
+        "<td font-family: 'Times New Roman'>Andy</td>"+
+        "<td align='left'>Andy</td>"+
       "</tr>" +
       "<tr>" +
-        "<td>Mike:<br>(face picture and name in different fonts)</td>" +
-        "<td align='left'><img height = 100px src='stimuli/Face_45.png'>" +
-        "<img height = 50px src='stimuli/Mike_1_instr.jpeg'>" +
-        "<img height = 50px src='stimuli/Mike_2_instr.jpeg'>" +
-        "<img height = 50px src='stimuli/Mike_3_instr.jpeg'>" +
-        "<img height = 50px src='stimuli/Mike_4_instr.jpeg'></td>" +
+        "<td>Mike:<br>(same picture, different fonts)</td>" +
+        "<td align='left'><img height = 100px src='stimuli/Face_45.png'></td>" +
+        "<td align='left'>Mike</td>"+
       "</tr>" +
     "</table>" +
     "<br>" +
-    "<p class='instructions'><center>You will perform four categorization blocks of 52 trials each.</center></p>" +
+    "<p class='instructions'><center>You will perform four categorization blocks of 40 trials each.</center></p>" +
     "<br>" +
     "<p class = 'continue-instructions'>Press <span class='key'>space</span>" +
     " to continue.</p>",
@@ -839,16 +829,10 @@ var iat_stim_block_1_2_Face_45_Andy = [
   {type: 'iat-html', category: "self_other",      stimulus: "their",               stim_key_association: other_side_1st},
   {type: 'iat-html', category: "self_other",      stimulus: "she",                 stim_key_association: other_side_1st},
   {type: 'iat-html', category: "self_other",      stimulus: "he",                  stim_key_association: other_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_1.jpeg',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_2.jpeg',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_3.jpeg',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_4.jpeg',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_1.jpeg',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_2.jpeg',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_3.jpeg',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_4.jpeg',              stim_key_association: Mike_side_1st}
+  {type: 'iat-image', category: "andy_mike",      stimulus: 'stimuli/Face_45.png',  stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_mike",      stimulus: 'stimuli/Face_55.png',  stim_key_association: Mike_side_1st},
+  {type: 'iat-html', category: "andy_mike",       stimulus: "Andy",                 stim_key_association: Andy_side_1st},
+  {type: 'iat-html', category: "andy_mike",       stimulus: "Mike",                 stim_key_association: Mike_side_1st}
 ]
 
 var iat_stim_block_1_2_Face_55_Andy = [
@@ -862,16 +846,10 @@ var iat_stim_block_1_2_Face_55_Andy = [
   {type: 'iat-html', category: "self_other",      stimulus: "their",               stim_key_association: other_side_1st},
   {type: 'iat-html', category: "self_other",      stimulus: "she",                 stim_key_association: other_side_1st},
   {type: 'iat-html', category: "self_other",      stimulus: "he",                  stim_key_association: other_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_1.jpeg',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_2.jpeg',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_3.jpeg',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_4.jpeg',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_1.jpeg',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_2.jpeg',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_3.jpeg',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_4.jpeg',              stim_key_association: Mike_side_1st}
+  {type: 'iat-image', category: "andy_mike",      stimulus: 'stimuli/Face_45.png',  stim_key_association: Mike_side_1st},
+  {type: 'iat-image', category: "andy_mike",      stimulus: 'stimuli/Face_55.png',  stim_key_association: Andy_side_1st},
+  {type: 'iat-html', category: "andy_mike",       stimulus: "Andy",                 stim_key_association: Andy_side_1st},
+  {type: 'iat-html', category: "andy_mike",       stimulus: "Mike",                 stim_key_association: Mike_side_1st}
 ]
 
 var iat_stim_block_3_4_Face_45_Andy = [
@@ -885,16 +863,10 @@ var iat_stim_block_3_4_Face_45_Andy = [
   {type: 'iat-html', category: "self_other",      stimulus: "their",               stim_key_association: other_side_2nd},
   {type: 'iat-html', category: "self_other",      stimulus: "she",                 stim_key_association: other_side_2nd},
   {type: 'iat-html', category: "self_other",      stimulus: "he",                  stim_key_association: other_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_1.jpeg',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_2.jpeg',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_3.jpeg',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_4.jpeg',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_1.jpeg',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_2.jpeg',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_3.jpeg',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_4.jpeg',              stim_key_association: Mike_side_2nd}
+  {type: 'iat-image', category: "andy_mike",      stimulus: 'stimuli/Face_45.png',  stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_mike",      stimulus: 'stimuli/Face_55.png',  stim_key_association: Mike_side_2nd},
+  {type: 'iat-html', category: "andy_mike",       stimulus: "Andy",                 stim_key_association: Andy_side_2nd},
+  {type: 'iat-html', category: "andy_mike",       stimulus: "Mike",                 stim_key_association: Mike_side_2nd}
 ]
 
 var iat_stim_block_3_4_Face_55_Andy = [
@@ -908,16 +880,10 @@ var iat_stim_block_3_4_Face_55_Andy = [
   {type: 'iat-html', category: "self_other",      stimulus: "their",               stim_key_association: other_side_2nd},
   {type: 'iat-html', category: "self_other",      stimulus: "she",                 stim_key_association: other_side_2nd},
   {type: 'iat-html', category: "self_other",      stimulus: "he",                  stim_key_association: other_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_1.jpeg',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_2.jpeg',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_3.jpeg',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_4.jpeg',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_1.jpeg',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_2.jpeg',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_3.jpeg',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_4.jpeg',              stim_key_association: Mike_side_2nd}
+  {type: 'iat-image', category: "andy_mike",      stimulus: 'stimuli/Face_45.png',  stim_key_association: Mike_side_2nd},
+  {type: 'iat-image', category: "andy_mike",      stimulus: 'stimuli/Face_55.png',  stim_key_association: Andy_side_2nd},
+  {type: 'iat-html', category: "andy_mike",       stimulus: "Andy",                 stim_key_association: Andy_side_2nd},
+  {type: 'iat-html', category: "andy_mike",       stimulus: "Mike",                 stim_key_association: Mike_side_2nd}
 ]
 
 // iat - block 3 (test) -----------------------------------------------------------------orginally 74 trials over 8 stim
