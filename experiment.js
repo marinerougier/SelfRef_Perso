@@ -329,19 +329,6 @@ var rating_self = {
         ],
         randomize_question_order: false, 
         button_label: 'Continue',
-        /*
-        on_load: function() {
-          window.scrollTo(0, 0);
-          //$(".jspsych-content").css("max-width", "100%");
-          $(".jspsych-content").css("margin-top", "100px");
-          //$(".jspsych-survey-likert-statement").css("margin", "0px");
-          //$(".jspsych-survey-likert-statement").css("padding", "0px");
-          //$(".jspsych-survey-likert-opts").css("padding", "0 0 10px");
-          //$("#jspsych-survey-likert-next").css("margin-top", "10px");
-          //$("#jspsych-survey-likert-form").css("width", "800px");
-         // $("li").css("width", "9%");
-        },
-        */
         on_finish: function(data) {
           data.task = "rating";
           var parsed_response  = JSON.parse(data.responses);
@@ -1290,19 +1277,6 @@ var rating_Andy_45Andy = {
         ],
         randomize_question_order: false, 
         button_label: 'Continue',
-        /*
-        on_load: function() {
-          window.scrollTo(0, 0);
-          //$(".jspsych-content").css("max-width", "100%");
-          $(".jspsych-content").css("margin-top", "100px");
-          //$(".jspsych-survey-likert-statement").css("margin", "0px");
-          //$(".jspsych-survey-likert-statement").css("padding", "0px");
-          //$(".jspsych-survey-likert-opts").css("padding", "0 0 10px");
-          //$("#jspsych-survey-likert-next").css("margin-top", "10px");
-          //$("#jspsych-survey-likert-form").css("width", "800px");
-         // $("li").css("width", "9%");
-        },
-        */
         on_finish: function(data) {
           data.task = "rating";
           var parsed_response  = JSON.parse(data.responses);
@@ -1378,19 +1352,6 @@ var rating_Mike_45Andy = {
         ],
         randomize_question_order: false, 
         button_label: 'Continue',
-        /*
-        on_load: function() {
-          window.scrollTo(0, 0);
-          //$(".jspsych-content").css("max-width", "100%");
-          $(".jspsych-content").css("margin-top", "100px");
-          //$(".jspsych-survey-likert-statement").css("margin", "0px");
-          //$(".jspsych-survey-likert-statement").css("padding", "0px");
-          //$(".jspsych-survey-likert-opts").css("padding", "0 0 10px");
-          //$("#jspsych-survey-likert-next").css("margin-top", "10px");
-          //$("#jspsych-survey-likert-form").css("width", "800px");
-         // $("li").css("width", "9%");
-        },
-        */
         on_finish: function(data) {
           data.task = "rating";
           var parsed_response  = JSON.parse(data.responses);
@@ -1466,19 +1427,6 @@ var rating_Andy_55Andy = {
         ],
         randomize_question_order: false, 
         button_label: 'Continue',
-        /*
-        on_load: function() {
-          window.scrollTo(0, 0);
-          //$(".jspsych-content").css("max-width", "100%");
-          $(".jspsych-content").css("margin-top", "100px");
-          //$(".jspsych-survey-likert-statement").css("margin", "0px");
-          //$(".jspsych-survey-likert-statement").css("padding", "0px");
-          //$(".jspsych-survey-likert-opts").css("padding", "0 0 10px");
-          //$("#jspsych-survey-likert-next").css("margin-top", "10px");
-          //$("#jspsych-survey-likert-form").css("width", "800px");
-         // $("li").css("width", "9%");
-        },
-        */
         on_finish: function(data) {
           data.task = "rating";
           var parsed_response  = JSON.parse(data.responses);
@@ -1554,19 +1502,6 @@ var rating_Mike_55Andy = {
         ],
         randomize_question_order: false, 
         button_label: 'Continue',
-        /*
-        on_load: function() {
-          window.scrollTo(0, 0);
-          //$(".jspsych-content").css("max-width", "100%");
-          $(".jspsych-content").css("margin-top", "100px");
-          //$(".jspsych-survey-likert-statement").css("margin", "0px");
-          //$(".jspsych-survey-likert-statement").css("padding", "0px");
-          //$(".jspsych-survey-likert-opts").css("padding", "0 0 10px");
-          //$("#jspsych-survey-likert-next").css("margin-top", "10px");
-          //$("#jspsych-survey-likert-form").css("width", "800px");
-         // $("li").css("width", "9%");
-        },
-        */
         on_finish: function(data) {
           data.task = "rating";
           var parsed_response  = JSON.parse(data.responses);
