@@ -589,7 +589,7 @@ var iat_instructions_1_45_Andy = {
   post_trial_gap: 200,
   stimulus:
     "<h1 class ='custom-title'> Part 2: Categorization task </h1>" +
-    "<p class='instructions'><center>Here are the four categories and the items belonging to each category</center></p>" +
+    "<p class='instructions'><center>Here are the four categories and the items belonging to each category. Try to remember which category each item belongs to.</center></p>" +
     "<table>" +
       "<tr>" +
         "<th width='200px'><p font:80>CATEGORY</p></th>" +
@@ -635,7 +635,7 @@ var iat_instructions_1_55_Andy = {
   post_trial_gap: 200,
   stimulus:
     "<h1 class ='custom-title'> Part 2: Categorization task </h1>" +
-    "<p class='instructions'><center>Here are the four categories and the items belonging to each category</center></p>" +
+    "<p class='instructions'><center>Here are the four categories and the items belonging to each category. Try to remember which category each item belongs to.</center></p>" +
     "<table>" +
       "<tr>" +
         "<th width='200px'><p font:80>CATEGORY</p></th>" +
