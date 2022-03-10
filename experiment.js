@@ -618,7 +618,7 @@ var iat_instructions_1_45_Andy = {
         "<td align='left'>others, &nbsp&nbsp&nbsp&nbsp&nbsp&nbspthey, &nbsp&nbsp&nbsp&nbsp&nbsp&nbsptheir, &nbsp&nbsp&nbsp&nbsp&nbsp&nbspshe, &nbsp&nbsp&nbsp&nbsp&nbsp&nbsphe</td>"+
       "</tr>" +
       "<tr>" +
-        "<td>Andy:<br>(face picture and name in different fonts)</td>" +
+        "<td>Andy:<br>(face picture and name in various fonts)</td>" +
         "<td align='left'><img height = 100px src='stimuli/Face_45.png'>" +
         "<img height = 50px src='stimuli/Andy_1_instr.jpeg'>" +
         "<img height = 50px src='stimuli/Andy_2_instr.jpeg'>" +
@@ -626,7 +626,7 @@ var iat_instructions_1_45_Andy = {
         "<img height = 50px src='stimuli/Andy_4_instr.jpeg'></td>" +
       "</tr>" +
       "<tr>" +
-        "<td>Mike:<br>(face picture and name in different fonts)</td>" +
+        "<td>Mike:<br>(face picture and name in various fonts)</td>" +
         "<td align='left'><img height = 100px src='stimuli/Face_55.png'>" +
         "<img height = 50px src='stimuli/Mike_1_instr.jpeg'>" +
         "<img height = 50px src='stimuli/Mike_2_instr.jpeg'>" +
@@ -664,7 +664,7 @@ var iat_instructions_1_55_Andy = {
         "<td align='left'>others, &nbsp&nbsp&nbsp&nbsp&nbsp&nbspthey, &nbsp&nbsp&nbsp&nbsp&nbsp&nbsptheir, &nbsp&nbsp&nbsp&nbsp&nbsp&nbspshe, &nbsp&nbsp&nbsp&nbsp&nbsp&nbsphe</td>"+
       "</tr>" +
       "<tr>" +
-        "<td>Andy:<br>(face picture and name in different fonts)</td>" +
+        "<td>Andy:<br>(face picture and name in various fonts)</td>" +
         "<td align='left'><img height = 100px src='stimuli/Face_55.png'>" +
         "<img height = 50px src='stimuli/Andy_1_instr.jpeg'>" +
         "<img height = 50px src='stimuli/Andy_2_instr.jpeg'>" +
@@ -672,7 +672,7 @@ var iat_instructions_1_55_Andy = {
         "<img height = 50px src='stimuli/Andy_4_instr.jpeg'></td>" +
       "</tr>" +
       "<tr>" +
-        "<td>Mike:<br>(face picture and name in different fonts)</td>" +
+        "<td>Mike:<br>(face picture and name in various fonts)</td>" +
         "<td align='left'><img height = 100px src='stimuli/Face_45.png'>" +
         "<img height = 50px src='stimuli/Mike_1_instr.jpeg'>" +
         "<img height = 50px src='stimuli/Mike_2_instr.jpeg'>" +
