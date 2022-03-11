@@ -82,10 +82,10 @@ if(!is_compatible) {
 
 // Variable input -----------------------------------------------------------------------
 // group associated with the self and first side in the self-referencing task 
-var pairing_SelfRef = jsPsych.randomization.sampleWithoutReplacement(["Andy_left", "Mike_left", "Andy_right", "Mike_right"], 1)[0];
+var pairing_SelfRef = jsPsych.randomization.sampleWithoutReplacement(["Andy_left", "John_left", "Andy_right", "John_right"], 1)[0];
 // First group rated in the final rating task
-var rating_firstgroup = jsPsych.randomization.sampleWithoutReplacement(["Andy_first", "Mike_first"], 1)[0];
-// Picture associated with the andy vs. mike first name
+var rating_firstgroup = jsPsych.randomization.sampleWithoutReplacement(["Andy_first", "John_first"], 1)[0];
+// Picture associated with the andy vs. John first name
 var Name_face   = jsPsych.randomization.sampleWithoutReplacement(["45_Andy", "55_Andy"], 1)[0];
         
 
@@ -115,18 +115,18 @@ var stim = [
       "stimuli/Andy_2.jpeg",
       "stimuli/Andy_3.jpeg",
       "stimuli/Andy_4.jpeg",
-      "stimuli/Mike_1.jpeg",
-      "stimuli/Mike_2.jpeg",
-      "stimuli/Mike_3.jpeg",
-      "stimuli/Mike_4.jpeg",
+      "stimuli/John_1.jpeg",
+      "stimuli/John_2.jpeg",
+      "stimuli/John_3.jpeg",
+      "stimuli/John_4.jpeg",
       "stimuli/Andy_1_instr.jpeg",
       "stimuli/Andy_2_instr.jpeg",
       "stimuli/Andy_3_instr.jpeg",
       "stimuli/Andy_4_instr.jpeg",
-      "stimuli/Mike_1_instr.jpeg",
-      "stimuli/Mike_2_instr.jpeg",
-      "stimuli/Mike_3_instr.jpeg",
-      "stimuli/Mike_4_instr.jpeg"
+      "stimuli/John_1_instr.jpeg",
+      "stimuli/John_2_instr.jpeg",
+      "stimuli/John_3_instr.jpeg",
+      "stimuli/John_4_instr.jpeg"
 ];
 
 
@@ -412,31 +412,31 @@ switch(pairing_SelfRef) {
         self_side_1st              = "left";
         other_side_1st             = "right";
         Andy_side_1st              = "left";
-        Mike_side_1st            = "right";
+        John_side_1st            = "right";
 
         self_side_2nd              = "right";
         other_side_2nd             = "left";
         Andy_side_2nd              = "right";
-        Mike_side_2nd            = "left";
+        John_side_2nd            = "left";
 
         block_1_left_label_bottom  = "<b>Self</b>-related words";
         block_1_right_label_bottom = "<b>Other</b>-related words";
         block_1_left_label_top   = "Andy";
-        block_1_right_label_top  = "Mike";
+        block_1_right_label_top  = "John";
 
         block_2_left_label_bottom  = "<b>Self</b>-related words";
         block_2_right_label_bottom = "<b>Other</b>-related words";
         block_2_left_label_top   = "Andy";
-        block_2_right_label_top  = "Mike";
+        block_2_right_label_top  = "John";
 
         block_3_left_label_bottom  = "<b>Other</b>-related words";
         block_3_right_label_bottom = "<b>Self</b>-related words";
-        block_3_left_label_top   = "Mike";
+        block_3_left_label_top   = "John";
         block_3_right_label_top  = "Andy";
 
         block_4_left_label_bottom  = "<b>Other</b>-related words";
         block_4_right_label_bottom = "<b>Self</b>-related words";
-        block_4_left_label_top   = "Mike";
+        block_4_left_label_top   = "John";
         block_4_right_label_top  = "Andy";
     break;
 
@@ -444,95 +444,95 @@ switch(pairing_SelfRef) {
         self_side_1st           = "right";
         other_side_1st          = "left";
         Andy_side_1st           = "right";
-        Mike_side_1st         = "left";
+        John_side_1st         = "left";
 
         self_side_2nd           = "left";
         other_side_2nd          = "right";
         Andy_side_2nd           = "left";
-        Mike_side_2nd         = "right";
+        John_side_2nd         = "right";
 
         block_1_left_label_bottom  = "<b>Other</b>-related words";
         block_1_right_label_bottom = "<b>Self</b>-related words";
-        block_1_left_label_top   = "Mike";
+        block_1_left_label_top   = "John";
         block_1_right_label_top  = "Andy";
 
         block_2_left_label_bottom  = "<b>Other</b>-related words";
         block_2_right_label_bottom = "<b>Self</b>-related words";
-        block_2_left_label_top   = "Mike";
+        block_2_left_label_top   = "John";
         block_2_right_label_top  = "Andy";
 
         block_3_left_label_bottom  = "<b>Self</b>-related words";
         block_3_right_label_bottom = "<b>Other</b>-related words";
         block_3_left_label_top   = "Andy";
-        block_3_right_label_top  = "Mike";
+        block_3_right_label_top  = "John";
 
         block_4_left_label_bottom  = "<b>Self</b>-related words";
         block_4_right_label_bottom = "<b>Other</b>-related words";
         block_4_left_label_top   = "Andy";
-        block_4_right_label_top  = "Mike";
+        block_4_right_label_top  = "John";
     break;
-  case "Mike_left":
+  case "John_left":
         self_side_1st               = "left";
         other_side_1st              = "right";
         Andy_side_1st               = "right";
-        Mike_side_1st             = "left";
+        John_side_1st             = "left";
 
         self_side_2nd               = "right";
         other_side_2nd              = "left";
         Andy_side_2nd               = "left";
-        Mike_side_2nd             = "right";
+        John_side_2nd             = "right";
 
         block_1_left_label_bottom  = "<b>Self</b>-related words";
         block_1_right_label_bottom = "<b>Other</b>-related words";
-        block_1_left_label_top   = "Mike";
+        block_1_left_label_top   = "John";
         block_1_right_label_top  = "Andy";
 
         block_2_left_label_bottom  = "<b>Self</b>-related words";
         block_2_right_label_bottom = "<b>Other</b>-related words";
-        block_2_left_label_top   = "Mike";
+        block_2_left_label_top   = "John";
         block_2_right_label_top  = "Andy";
 
         block_3_left_label_bottom  = "<b>Other</b>-related words";
         block_3_right_label_bottom = "<b>Self</b>-related words";
         block_3_left_label_top   = "Andy";
-        block_3_right_label_top  = "Mike";
+        block_3_right_label_top  = "John";
 
         block_4_left_label_bottom  = "<b>Other</b>-related words";
         block_4_right_label_bottom = "<b>Self</b>-related words";
         block_4_left_label_top   = "Andy";
-        block_4_right_label_top  = "Mike";
+        block_4_right_label_top  = "John";
     break;
 
-  case "Mike_right":
+  case "John_right":
         self_side_1st               = "right";
         other_side_1st              = "left";
         Andy_side_1st               = "left";
-        Mike_side_1st             = "right";
+        John_side_1st             = "right";
 
         self_side_2nd               = "left";
         other_side_2nd              = "right";
         Andy_side_2nd               = "right";
-        Mike_side_2nd             = "left";
+        John_side_2nd             = "left";
 
 
         block_1_left_label_bottom  = "<b>Other</b>-related words";
         block_1_right_label_bottom = "<b>Self</b>-related words";
         block_1_left_label_top   = "Andy";
-        block_1_right_label_top  = "Mike";
+        block_1_right_label_top  = "John";
 
         block_2_left_label_bottom  = "<b>Other</b>-related words";
         block_2_right_label_bottom = "<b>Self</b>-related words";
         block_2_left_label_top   = "Andy";
-        block_2_right_label_top  = "Mike";
+        block_2_right_label_top  = "John";
 
         block_3_left_label_bottom  = "<b>Self</b>-related words";
         block_3_right_label_bottom = "<b>Other</b>-related words";
-        block_3_left_label_top   = "Mike";
+        block_3_left_label_top   = "John";
         block_3_right_label_top  = "Andy";
 
         block_4_left_label_bottom  = "<b>Self</b>-related words";
         block_4_right_label_bottom = "<b>Other</b>-related words";
-        block_4_left_label_top   = "Mike";
+        block_4_left_label_top   = "John";
         block_4_right_label_top  = "Andy";
     break;
 }
@@ -570,7 +570,7 @@ var iat_instructions_1 = {
     " as accurately as you can using the keyboard. In the following screen you will be presented" +
     " a list of category labels and the items that belong to each of these categories." +
     "</p>" +
-    "<p class='instructions'>As you will see, you will sort the pictures and names of two individuals, Andy and Mike," +
+    "<p class='instructions'>As you will see, you will sort the pictures and names of two individuals, Andy and John," +
     " and words depending on whether they refer to the <b>self</b> or to <b>others.</b></p>" +
     "<h3 class='instructions'>Instructions</h3>" +
     "<ul class='instructions'>" +
@@ -589,7 +589,7 @@ var iat_instructions_1_45_Andy = {
   post_trial_gap: 200,
   stimulus:
     "<h1 class ='custom-title'> Part 2: Categorization task </h1>" +
-    "<p class='instructions'><center>Here are the four categories and the items belonging to each category. Try to remember which category each item belongs to.</center></p>" +
+    "<p class='instructions'><center>Here are the four categories and the items belonging to each category. <br>Try to remember which category each item belongs to.</center></p>" +
     "<table>" +
       "<tr>" +
         "<th width='200px'><p font:80>CATEGORY</p></th>" +
@@ -613,12 +613,12 @@ var iat_instructions_1_45_Andy = {
         "<img height = 50px src='stimuli/Andy_4_instr.jpeg'></td>" +
       "</tr>" +
       "<tr>" +
-        "<td>Mike:<br>(face picture and name in various fonts)</td>" +
+        "<td>John:<br>(face picture and name in various fonts)</td>" +
         "<td align='left'><img height = 100px src='stimuli/Face_55.png'>" +
-        "<img height = 50px src='stimuli/Mike_1_instr.jpeg'>" +
-        "<img height = 50px src='stimuli/Mike_2_instr.jpeg'>" +
-        "<img height = 50px src='stimuli/Mike_3_instr.jpeg'>" +
-        "<img height = 50px src='stimuli/Mike_4_instr.jpeg'></td>" +
+        "<img height = 50px src='stimuli/John_1_instr.jpeg'>" +
+        "<img height = 50px src='stimuli/John_2_instr.jpeg'>" +
+        "<img height = 50px src='stimuli/John_3_instr.jpeg'>" +
+        "<img height = 50px src='stimuli/John_4_instr.jpeg'></td>" +
       "</tr>" +
     "</table>" +
     "<br>" +
@@ -635,7 +635,7 @@ var iat_instructions_1_55_Andy = {
   post_trial_gap: 200,
   stimulus:
     "<h1 class ='custom-title'> Part 2: Categorization task </h1>" +
-    "<p class='instructions'><center>Here are the four categories and the items belonging to each category. Try to remember which category each item belongs to.</center></p>" +
+    "<p class='instructions'><center>Here are the four categories and the items belonging to each category. <br>Try to remember which category each item belongs to.</center></p>" +
     "<table>" +
       "<tr>" +
         "<th width='200px'><p font:80>CATEGORY</p></th>" +
@@ -659,12 +659,12 @@ var iat_instructions_1_55_Andy = {
         "<img height = 50px src='stimuli/Andy_4_instr.jpeg'></td>" +
       "</tr>" +
       "<tr>" +
-        "<td>Mike:<br>(face picture and name in various fonts)</td>" +
+        "<td>John:<br>(face picture and name in various fonts)</td>" +
         "<td align='left'><img height = 100px src='stimuli/Face_45.png'>" +
-        "<img height = 50px src='stimuli/Mike_1_instr.jpeg'>" +
-        "<img height = 50px src='stimuli/Mike_2_instr.jpeg'>" +
-        "<img height = 50px src='stimuli/Mike_3_instr.jpeg'>" +
-        "<img height = 50px src='stimuli/Mike_4_instr.jpeg'></td>" +
+        "<img height = 50px src='stimuli/John_1_instr.jpeg'>" +
+        "<img height = 50px src='stimuli/John_2_instr.jpeg'>" +
+        "<img height = 50px src='stimuli/John_3_instr.jpeg'>" +
+        "<img height = 50px src='stimuli/John_4_instr.jpeg'></td>" +
       "</tr>" +
     "</table>" +
     "<br>" +
@@ -826,22 +826,22 @@ var iat_stim_block_1_2_Face_45_Andy = [
   {type: 'iat-html', category: "self_other",      stimulus: "their",               stim_key_association: other_side_1st},
   {type: 'iat-html', category: "self_other",      stimulus: "she",                 stim_key_association: other_side_1st},
   {type: 'iat-html', category: "self_other",      stimulus: "he",                  stim_key_association: other_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_1.jpeg',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_2.jpeg',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_3.jpeg',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_4.jpeg',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_1.jpeg',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_2.jpeg',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_3.jpeg',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_4.jpeg',              stim_key_association: Mike_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_1.jpeg',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_2.jpeg',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_3.jpeg',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_4.jpeg',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: John_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: John_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: John_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: John_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_1.jpeg',              stim_key_association: John_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_2.jpeg',              stim_key_association: John_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_3.jpeg',              stim_key_association: John_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_4.jpeg',              stim_key_association: John_side_1st},
   {type: 'iat-html', category: "self_other",      stimulus: "me",                  stim_key_association: self_side_1st},
   {type: 'iat-html', category: "self_other",      stimulus: "mine",                stim_key_association: self_side_1st},
   {type: 'iat-html', category: "self_other",      stimulus: "I",                   stim_key_association: self_side_1st},
@@ -852,22 +852,22 @@ var iat_stim_block_1_2_Face_45_Andy = [
   {type: 'iat-html', category: "self_other",      stimulus: "their",               stim_key_association: other_side_1st},
   {type: 'iat-html', category: "self_other",      stimulus: "she",                 stim_key_association: other_side_1st},
   {type: 'iat-html', category: "self_other",      stimulus: "he",                  stim_key_association: other_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_1.jpeg',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_2.jpeg',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_3.jpeg',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_4.jpeg',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_1.jpeg',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_2.jpeg',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_3.jpeg',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_4.jpeg',              stim_key_association: Mike_side_1st}
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_1.jpeg',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_2.jpeg',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_3.jpeg',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_4.jpeg',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: John_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: John_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: John_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: John_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_1.jpeg',              stim_key_association: John_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_2.jpeg',              stim_key_association: John_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_3.jpeg',              stim_key_association: John_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_4.jpeg',              stim_key_association: John_side_1st}
 ]
 
 var iat_stim_block_1_2_Face_55_Andy = [
@@ -881,22 +881,22 @@ var iat_stim_block_1_2_Face_55_Andy = [
   {type: 'iat-html', category: "self_other",      stimulus: "their",               stim_key_association: other_side_1st},
   {type: 'iat-html', category: "self_other",      stimulus: "she",                 stim_key_association: other_side_1st},
   {type: 'iat-html', category: "self_other",      stimulus: "he",                  stim_key_association: other_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_1.jpeg',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_2.jpeg',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_3.jpeg',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_4.jpeg',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_1.jpeg',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_2.jpeg',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_3.jpeg',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_4.jpeg',              stim_key_association: Mike_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_1.jpeg',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_2.jpeg',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_3.jpeg',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_4.jpeg',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: John_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: John_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: John_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: John_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_1.jpeg',              stim_key_association: John_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_2.jpeg',              stim_key_association: John_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_3.jpeg',              stim_key_association: John_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_4.jpeg',              stim_key_association: John_side_1st},
   {type: 'iat-html', category: "self_other",      stimulus: "me",                  stim_key_association: self_side_1st},
   {type: 'iat-html', category: "self_other",      stimulus: "mine",                stim_key_association: self_side_1st},
   {type: 'iat-html', category: "self_other",      stimulus: "I",                   stim_key_association: self_side_1st},
@@ -907,22 +907,22 @@ var iat_stim_block_1_2_Face_55_Andy = [
   {type: 'iat-html', category: "self_other",      stimulus: "their",               stim_key_association: other_side_1st},
   {type: 'iat-html', category: "self_other",      stimulus: "she",                 stim_key_association: other_side_1st},
   {type: 'iat-html', category: "self_other",      stimulus: "he",                  stim_key_association: other_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_1.jpeg',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_2.jpeg',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_3.jpeg',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_4.jpeg',              stim_key_association: Andy_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_1.jpeg',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_2.jpeg',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_3.jpeg',              stim_key_association: Mike_side_1st},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_4.jpeg',              stim_key_association: Mike_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_1.jpeg',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_2.jpeg',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_3.jpeg',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_4.jpeg',              stim_key_association: Andy_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: John_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: John_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: John_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: John_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_1.jpeg',              stim_key_association: John_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_2.jpeg',              stim_key_association: John_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_3.jpeg',              stim_key_association: John_side_1st},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_4.jpeg',              stim_key_association: John_side_1st},
 ]
 
 var iat_stim_block_3_4_Face_45_Andy = [
@@ -936,22 +936,22 @@ var iat_stim_block_3_4_Face_45_Andy = [
   {type: 'iat-html', category: "self_other",      stimulus: "their",               stim_key_association: other_side_2nd},
   {type: 'iat-html', category: "self_other",      stimulus: "she",                 stim_key_association: other_side_2nd},
   {type: 'iat-html', category: "self_other",      stimulus: "he",                  stim_key_association: other_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_1.jpeg',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_2.jpeg',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_3.jpeg',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_4.jpeg',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_1.jpeg',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_2.jpeg',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_3.jpeg',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_4.jpeg',              stim_key_association: Mike_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_1.jpeg',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_2.jpeg',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_3.jpeg',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_4.jpeg',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: John_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: John_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: John_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: John_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_1.jpeg',              stim_key_association: John_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_2.jpeg',              stim_key_association: John_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_3.jpeg',              stim_key_association: John_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_4.jpeg',              stim_key_association: John_side_2nd},
   {type: 'iat-html', category: "self_other",      stimulus: "me",                  stim_key_association: self_side_2nd},
   {type: 'iat-html', category: "self_other",      stimulus: "mine",                stim_key_association: self_side_2nd},
   {type: 'iat-html', category: "self_other",      stimulus: "I",                   stim_key_association: self_side_2nd},
@@ -962,22 +962,22 @@ var iat_stim_block_3_4_Face_45_Andy = [
   {type: 'iat-html', category: "self_other",      stimulus: "their",               stim_key_association: other_side_2nd},
   {type: 'iat-html', category: "self_other",      stimulus: "she",                 stim_key_association: other_side_2nd},
   {type: 'iat-html', category: "self_other",      stimulus: "he",                  stim_key_association: other_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_1.jpeg',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_2.jpeg',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_3.jpeg',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_4.jpeg',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_1.jpeg',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_2.jpeg',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_3.jpeg',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_4.jpeg',              stim_key_association: Mike_side_2nd}
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_1.jpeg',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_2.jpeg',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_3.jpeg',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_4.jpeg',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: John_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: John_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: John_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: John_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_1.jpeg',              stim_key_association: John_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_2.jpeg',              stim_key_association: John_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_3.jpeg',              stim_key_association: John_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_4.jpeg',              stim_key_association: John_side_2nd}
 ]
 
 var iat_stim_block_3_4_Face_55_Andy = [
@@ -991,22 +991,22 @@ var iat_stim_block_3_4_Face_55_Andy = [
   {type: 'iat-html', category: "self_other",      stimulus: "their",               stim_key_association: other_side_2nd},
   {type: 'iat-html', category: "self_other",      stimulus: "she",                 stim_key_association: other_side_2nd},
   {type: 'iat-html', category: "self_other",      stimulus: "he",                  stim_key_association: other_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_1.jpeg',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_2.jpeg',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_3.jpeg',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_4.jpeg',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_1.jpeg',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_2.jpeg',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_3.jpeg',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_4.jpeg',              stim_key_association: Mike_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_1.jpeg',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_2.jpeg',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_3.jpeg',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_4.jpeg',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: John_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: John_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: John_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: John_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_1.jpeg',              stim_key_association: John_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_2.jpeg',              stim_key_association: John_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_3.jpeg',              stim_key_association: John_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_4.jpeg',              stim_key_association: John_side_2nd},
   {type: 'iat-html', category: "self_other",      stimulus: "me",                  stim_key_association: self_side_2nd},
   {type: 'iat-html', category: "self_other",      stimulus: "mine",                stim_key_association: self_side_2nd},
   {type: 'iat-html', category: "self_other",      stimulus: "I",                   stim_key_association: self_side_2nd},
@@ -1017,22 +1017,22 @@ var iat_stim_block_3_4_Face_55_Andy = [
   {type: 'iat-html', category: "self_other",      stimulus: "their",               stim_key_association: other_side_2nd},
   {type: 'iat-html', category: "self_other",      stimulus: "she",                 stim_key_association: other_side_2nd},
   {type: 'iat-html', category: "self_other",      stimulus: "he",                  stim_key_association: other_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_1.jpeg',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_2.jpeg',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_3.jpeg',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Andy_4.jpeg',              stim_key_association: Andy_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Face_45.png',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_1.jpeg',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_2.jpeg',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_3.jpeg',              stim_key_association: Mike_side_2nd},
-  {type: 'iat-image', category: "andy_mike", stimulus: 'stimuli/Mike_4.jpeg',              stim_key_association: Mike_side_2nd}
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_55.png',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_1.jpeg',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_2.jpeg',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_3.jpeg',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Andy_4.jpeg',              stim_key_association: Andy_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: John_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: John_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: John_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/Face_45.png',              stim_key_association: John_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_1.jpeg',              stim_key_association: John_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_2.jpeg',              stim_key_association: John_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_3.jpeg',              stim_key_association: John_side_2nd},
+  {type: 'iat-image', category: "andy_John", stimulus: 'stimuli/John_4.jpeg',              stim_key_association: John_side_2nd}
 ]
 
 // iat - block 3 (test) -----------------------------------------------------------------orginally 74 trials over 8 stim
@@ -1042,7 +1042,7 @@ var iat_block_1_Face_45_Andy = {
       type: jsPsych.timelineVariable('type'),
       stimulus: jsPsych.timelineVariable('stimulus'),
       category: jsPsych.timelineVariable('category'),
-      label_category: ['self_other', 'andy_mike'],
+      label_category: ['self_other', 'andy_John'],
       stim_key_association: jsPsych.timelineVariable('stim_key_association'),
       html_when_wrong: '<span style="color: red; font-size: 80px">&times;</span>',
       force_correct_key_press: true,
@@ -1068,7 +1068,7 @@ var iat_block_2_Face_45_Andy = {
       type: jsPsych.timelineVariable('type'),
       stimulus: jsPsych.timelineVariable('stimulus'),
       category: jsPsych.timelineVariable('category'),
-      label_category: ['self_other', 'andy_mike'],
+      label_category: ['self_other', 'andy_John'],
       stim_key_association: jsPsych.timelineVariable('stim_key_association'),
       html_when_wrong: '<span style="color: red; font-size: 80px">&times;</span>',
       force_correct_key_press: true,
@@ -1094,7 +1094,7 @@ var iat_block_3_Face_45_Andy = {
       type: jsPsych.timelineVariable('type'),
       stimulus: jsPsych.timelineVariable('stimulus'),
       category: jsPsych.timelineVariable('category'),
-      label_category: ['self_other', 'andy_mike'],
+      label_category: ['self_other', 'andy_John'],
       stim_key_association: jsPsych.timelineVariable('stim_key_association'),
       html_when_wrong: '<span style="color: red; font-size: 80px">&times;</span>',
       force_correct_key_press: true,
@@ -1120,7 +1120,7 @@ var iat_block_4_Face_45_Andy = {
       type: jsPsych.timelineVariable('type'),
       stimulus: jsPsych.timelineVariable('stimulus'),
       category: jsPsych.timelineVariable('category'),
-      label_category: ['self_other', 'andy_mike'],
+      label_category: ['self_other', 'andy_John'],
       stim_key_association: jsPsych.timelineVariable('stim_key_association'),
       html_when_wrong: '<span style="color: red; font-size: 80px">&times;</span>',
       force_correct_key_press: true,
@@ -1147,7 +1147,7 @@ var iat_block_1_Face_55_Andy = {
       type: jsPsych.timelineVariable('type'),
       stimulus: jsPsych.timelineVariable('stimulus'),
       category: jsPsych.timelineVariable('category'),
-      label_category: ['self_other', 'andy_mike'],
+      label_category: ['self_other', 'andy_John'],
       stim_key_association: jsPsych.timelineVariable('stim_key_association'),
       html_when_wrong: '<span style="color: red; font-size: 80px">&times;</span>',
       force_correct_key_press: true,
@@ -1173,7 +1173,7 @@ var iat_block_2_Face_55_Andy = {
       type: jsPsych.timelineVariable('type'),
       stimulus: jsPsych.timelineVariable('stimulus'),
       category: jsPsych.timelineVariable('category'),
-      label_category: ['self_other', 'andy_mike'],
+      label_category: ['self_other', 'andy_John'],
       stim_key_association: jsPsych.timelineVariable('stim_key_association'),
       html_when_wrong: '<span style="color: red; font-size: 80px">&times;</span>',
       force_correct_key_press: true,
@@ -1199,7 +1199,7 @@ var iat_block_3_Face_55_Andy = {
       type: jsPsych.timelineVariable('type'),
       stimulus: jsPsych.timelineVariable('stimulus'),
       category: jsPsych.timelineVariable('category'),
-      label_category: ['self_other', 'andy_mike'],
+      label_category: ['self_other', 'andy_John'],
       stim_key_association: jsPsych.timelineVariable('stim_key_association'),
       html_when_wrong: '<span style="color: red; font-size: 80px">&times;</span>',
       force_correct_key_press: true,
@@ -1225,7 +1225,7 @@ var iat_block_4_Face_55_Andy = {
       type: jsPsych.timelineVariable('type'),
       stimulus: jsPsych.timelineVariable('stimulus'),
       category: jsPsych.timelineVariable('category'),
-      label_category: ['self_other', 'andy_mike'],
+      label_category: ['self_other', 'andy_John'],
       stim_key_association: jsPsych.timelineVariable('stim_key_association'),
       html_when_wrong: '<span style="color: red; font-size: 80px">&times;</span>',
       force_correct_key_press: true,
@@ -1256,17 +1256,17 @@ var iat_instructions_2 = {
   choices: [32]
 };
 
-// Rating of andy and mike -----------------------------------------------------------------------------------
+// Rating of andy and John -----------------------------------------------------------------------------------
 var Rating_instructions_1 = {
   type: "html-keyboard-response",
   post_trial_gap: 200,
   stimulus:
-    "<h1 class ='custom-title'> Part 3: Rating of Andy and Mike </h1>" +
+    "<h1 class ='custom-title'> Part 3: Rating of Andy and John </h1>" +
     "<p class='instructions'>You should know that <b>the two persons</b> that you saw in the categorization task"+
-    " (Andy and Mike)" +
-    " are in fact <b>very different from each other. Indeed, Andy and Mike have a very different personalities and typically"+
+    " (Andy and John)" +
+    " are in fact <b>very different from each other. Indeed, Andy and John have a very different personalities and typically"+
     " behave in very different ways.</br></br>"+
-    " Your task is to evaluate Andy and Mike on the same series of traits as in Part 1."+
+    " Your task is to evaluate Andy and John on the same series of traits as in Part 1."+
     " It is extremely important that you try to answer <b> as honestly and as spontaneously as possible.</b> There are no good or" +
     " bad answers. You just have to respond <b>as intuitively as possible. </b></br></br>"+
     "</p>" +
@@ -1350,10 +1350,10 @@ var rating_Andy_45Andy = {
         },
     };
 
-var rating_Mike_45Andy = {
+var rating_John_45Andy = {
         type: 'survey-likert',
         post_trial_gap: 200,
-        preamble: "<br><br><img height = 300px src='stimuli/Face_55.png'><br><br><b><i>Mike is a person who..</b></i><br><br>",
+        preamble: "<br><br><img height = 300px src='stimuli/Face_55.png'><br><br><b><i>John is a person who..</b></i><br><br>",
         questions: [
           {prompt: "<b>Tends to be quiet.</b>", labels: scale_questionnaire, required: true},
           {prompt: "<b>Is compassionate, has a soft heart.</b>", labels: scale_questionnaire, required: true},
@@ -1421,7 +1421,7 @@ var rating_Mike_45Andy = {
           data.Personality_28     = parsed_response.Q27 ;
           data.Personality_29     = parsed_response.Q28 ;
           data.Personality_30     = parsed_response.Q29 ;
-          data.target_rating    = "Mike";
+          data.target_rating    = "John";
         },
     };
 
@@ -1500,10 +1500,10 @@ var rating_Andy_55Andy = {
         },
     };
 
-var rating_Mike_55Andy = {
+var rating_John_55Andy = {
         type: 'survey-likert',
         post_trial_gap: 200,
-        preamble: "<br><br><img height = 300px src='stimuli/Face_45.png'><br><br><b><i>Mike is a person who..</b></i><br><br>",
+        preamble: "<br><br><img height = 300px src='stimuli/Face_45.png'><br><br><b><i>John is a person who..</b></i><br><br>",
         questions: [
           {prompt: "<b>Tends to be quiet.</b>", labels: scale_questionnaire, required: true},
           {prompt: "<b>Is compassionate, has a soft heart.</b>", labels: scale_questionnaire, required: true},
@@ -1571,7 +1571,7 @@ var rating_Mike_55Andy = {
           data.Personality_28     = parsed_response.Q27 ;
           data.Personality_29     = parsed_response.Q28 ;
           data.Personality_30     = parsed_response.Q29 ;
-          data.target_rating    = "Mike";
+          data.target_rating    = "John";
         },
     };
 
@@ -1591,7 +1591,7 @@ var Rating_instructions_end = {
 /* Memory of the self-group referencing */
 var memory_group = {
       type: 'survey-multi-choice',
-      questions: [{prompt: "In the categorization task, who shared the same response key with self-related words?", options: ['Andy', 'Mike', 'I do not remember'], required: true}],
+      questions: [{prompt: "In the categorization task, who shared the same response key with self-related words?", options: ['Andy', 'John', 'I do not remember'], required: true}],
       button_label: "Continue",
       on_load: function() {
           window.scrollTo(0, 0);
@@ -1628,7 +1628,7 @@ var memory_group = {
 
   var influence_awareness = {
       type: 'survey-multi-choice',
-      questions: [{prompt: "Do you think that the key sharing between self- and other-related words<br> and Andy and Mike influenced your judgment of Andy and Mike <br>when you had to judge them on the personality traits/outcomes?", options: ['Yes', 'No', 'I do not know'], required: true}],
+      questions: [{prompt: "Do you think that the key sharing between self- and other-related words<br> and Andy and John influenced your judgment of Andy and John <br>when you had to judge them on the personality traits/outcomes?", options: ['Yes', 'No', 'I do not know'], required: true}],
       button_label: "Continue",
       on_load: function() {
           window.scrollTo(0, 0);
@@ -1644,7 +1644,7 @@ var memory_group = {
 
   var demand_compliance = {
       type: 'survey-multi-choice',
-      questions: [{prompt: "When we asked you to evaluate Andy and Mike on the personality traits/outcomes,<br> did you tell us the truth about what you think? Or did you just fake your response (i.e., tell us <br>what you thought we wanted to hear)? Please be honest here (it will not affect payment in any way).", options: ['Yes - I faked my response based on what I thought the researchers wanted to find', 'No - my responses were based on how I genuinely felt', 'I do not know'], required: true}],
+      questions: [{prompt: "When we asked you to evaluate Andy and John on the personality traits/outcomes,<br> did you tell us the truth about what you think? Or did you just fake your response (i.e., tell us <br>what you thought we wanted to hear)? Please be honest here (it will not affect payment in any way).", options: ['Yes - I faked my response based on what I thought the researchers wanted to find', 'No - my responses were based on how I genuinely felt', 'I do not know'], required: true}],
       button_label: "Continue",
       on_load: function() {
           window.scrollTo(0, 0);
@@ -1765,8 +1765,8 @@ var memory_group = {
   debrief += "naturally behave.<br><br>";
   debrief += "Now we would like to explain what we were trying to learn about with this study. In the first part of the study, we assessed your "; 
   debrief += "personality using the Big Five Inventory (e.g., to what extent you think you are extroverted). In the second part, we asked you to categorize words referring to the self (e.g., 'I') "; 
-  debrief += "and to others (e.g., 'he') together with picures of Andy and Mike. Our goal in this second part was to create a special link "; 
-  debrief += "between these categories of items: When two categories (e.g., self words and the picture of Mike) share the same response key, we expect "; 
+  debrief += "and to others (e.g., 'he') together with picures of Andy and John. Our goal in this second part was to create a special link "; 
+  debrief += "between these categories of items: When two categories (e.g., self words and the picture of John) share the same response key, we expect "; 
   debrief += "them to be more strongly linked after the task. If so, you should have rated the group of faces sharing the response key with ";
   debrief += "self words as more similar to yourself in the third part (e.g., as more 'extroverted' if you think you are 'extroverted'). <br><br>"; 
   debrief += "We would like to emphasize that there are no correct responses in this study: We were looking at people’s natural responses. ";
@@ -1828,7 +1828,7 @@ switch(Name_face) {
               showing_cursor,
               Rating_instructions_1,
               rating_Andy_45Andy,
-              rating_Mike_45Andy,
+              rating_John_45Andy,
               Rating_instructions_end);
     break;
   case "55_Andy":
@@ -1846,7 +1846,7 @@ switch(Name_face) {
               showing_cursor,
               Rating_instructions_1,
               rating_Andy_55Andy,
-              rating_Mike_55Andy,
+              rating_John_55Andy,
               Rating_instructions_end);
     break;
 }
@@ -1895,7 +1895,7 @@ if(is_compatible) {
 
         var dataSelfRating = data.filter({ target_rating: 'self' }).csv();
         var dataAndy = data.filter({ target_rating: 'Andy' }).csv();
-        var dataMike = data.filter({ target_rating: 'Mike' }).csv();
+        var dataJohn = data.filter({ target_rating: 'John' }).csv();
 
         saving_browser_events(completion = true);
 
@@ -1910,7 +1910,7 @@ if(is_compatible) {
         .then(function () {
       database
         .ref("SelfRef_Perso/" + jspsych_id + "/")
-        .update({ dataMike })
+        .update({ dataJohn })
         .then(function () {
               console.log("Data sent!");
               $("#jspsych-content").html(debrief);
