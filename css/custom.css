@@ -61,3 +61,14 @@
 	color: #009000;
 	font-weight: bold;
 }
+
+/* image display in the rating task*/
+.imgBack {
+    position: fixed;
+    height: 35%; 
+    margin: 0px;
+    padding: 0px;
+    top: 0px;
+    left:19%;
+    z-index: 2;
+}

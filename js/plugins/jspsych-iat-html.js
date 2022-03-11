@@ -26,13 +26,13 @@
       left_category_key: {
         type: jsPsych.plugins.parameterType.HTML_STRING, 
         pretty_name: 'Left category key',
-        default: 'E',
+        default: 'D',
         description: 'Key press that is associated with the left category label.'
       },
       right_category_key: {
         type: jsPsych.plugins.parameterType.STRING,
         pretty_name: 'Right category key',
-        default: 'I',
+        default: 'K',
         description: 'Key press that is associated with the right category label.'
       },
       left_category_label: {

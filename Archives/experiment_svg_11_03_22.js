@@ -126,12 +126,7 @@ var stim = [
       "stimuli/John_1_instr.jpeg",
       "stimuli/John_2_instr.jpeg",
       "stimuli/John_3_instr.jpeg",
-      "stimuli/John_4_instr.jpeg",
-      "stimuli/Face_45_Andy.jpeg",
-      "stimuli/Face_45_John.jpeg",
-      "stimuli/Face_55_Andy.jpeg",
-      "stimuli/Face_55_John.jpeg",
-      "stimuli/Self.jpeg"
+      "stimuli/John_4_instr.jpeg"
 ];
 
 
@@ -385,8 +380,8 @@ var Personality_instructions_end = {
 // Self_referencing variable initialization ----------------------------------------------------------
 /*
 Self-referencing task (SR-task): Four blocks of 40 trials each (standard version; Prestwich et al., 2010): 
-- Blocks 1 & 2: Target 1 – Self (e.g., D key) vs. Target 2 – Others (e.g., I key) --> 4 repetitions in each block (because 10 stim)
-- Blocks 3 & 4: Target 1 – Self (e.g., I key) vs. Target 2 – Others (e.g., D key) --> 4 repetitions in each block (because 10 stim)
+- Blocks 1 & 2: Target 1 – Self (e.g., E key) vs. Target 2 – Others (e.g., I key) --> 4 repetitions in each block (because 10 stim)
+- Blocks 3 & 4: Target 1 – Self (e.g., I key) vs. Target 2 – Others (e.g., E key) --> 4 repetitions in each block (because 10 stim)
 In case of incorrect classification: a red ‘X’ appears (remains until correction). 
 */
 
@@ -579,7 +574,7 @@ var iat_instructions_1 = {
     " and words depending on whether they refer to the <b>self</b> or to <b>others.</b></p>" +
     "<h3 class='instructions'>Instructions</h3>" +
     "<ul class='instructions'>" +
-      "<li>Keep fingers on the <span class='key'>D</span> and <span class='key'>K</span> keys of the keyboard.</li>" +
+      "<li>Keep fingers on the <span class='key'>E</span> and <span class='key'>I</span> keys of the keyboard.</li>" +
       "<li>Labels at the top will tell you which items go with each key.</li>" +
       "<li>Be as accurate as you can.</li>" +
     "</ul>" +
@@ -689,13 +684,13 @@ var iat_instructions_block_1 = {
   post_trial_gap: 200,
   stimulus:
   "<div style='position: absolute; top: 18%; left: 20%'><p>" +
-    "Press <span class='key'>D</span> for items relating to:<br> " +
+    "Press <span class='key'>E</span> for items relating to:<br> " +
     "<span class='iat-category good-bad'>" + block_1_left_label_top  + "</span>" +
     "<br>" +
     "<span class='iat-category good-bad'>" + block_1_left_label_bottom + "</span>" +
   "</p></div>" +
   "<div style='position: absolute; top: 18%; right: 20%'><p>" +
-    "Press <span class='key'>K</span>  for items relating to:<br>" +
+    "Press <span class='key'>I</span>  for items relating to:<br>" +
     "<span class='iat-category good-bad'>" + block_1_right_label_top + "</span>" +
     "<br>" +
     "<span class='iat-category good-bad'>" + block_1_right_label_bottom  + "</span>" +
@@ -707,7 +702,7 @@ var iat_instructions_block_1 = {
     "Remember, each item belongs to only one group." +
     "</p>" +
     "<p class='instructions'>" +
-    "Use the <span class='key'>D</span> and <span class='key'>K</span> keys to categorize " +
+    "Use the <span class='key'>E</span> and <span class='key'>I</span> keys to categorize " +
     "items into the four groups left and right, and correct errors by hitting the other key." +
     "</p>" +
   "</div> " +
@@ -722,13 +717,13 @@ var iat_instructions_block_2 = {
   post_trial_gap: 200,
   stimulus:
   "<div style='position: absolute; top: 18%; left: 20%'><p>" +
-    "Press <span class='key'>D</span> for items relating to:<br> " +
+    "Press <span class='key'>E</span> for items relating to:<br> " +
     "<span class='iat-category good-bad'>" + block_2_left_label_top  + "</span>" +
     "<br>" +
     "<span class='iat-category good-bad'>" + block_2_left_label_bottom + "</span>" +
   "</p></div>" +
   "<div style='position: absolute; top: 18%; right: 20%'><p>" +
-    "Press <span class='key'>K</span>  for items relating to:<br>" +
+    "Press <span class='key'>I</span>  for items relating to:<br>" +
     "<span class='iat-category good-bad'>" + block_2_right_label_top + "</span>" +
     "<br>" +
     "<span class='iat-category good-bad'>" + block_2_right_label_bottom  + "</span>" +
@@ -740,7 +735,7 @@ var iat_instructions_block_2 = {
     "Categories have the same position as in Block 1." +
     "</p>" +
     "<p class='instructions'>" +
-    "As before, use the <span class='key'>E</span> and <span class='key'>K</span> keys to categorize " +
+    "As before, use the <span class='key'>E</span> and <span class='key'>I</span> keys to categorize " +
     "items into the four groups left and right, and correct errors by hitting the other key." +
     "</p>" +
   "</div> " +
@@ -755,13 +750,13 @@ var iat_instructions_block_3 = {
   post_trial_gap: 200,
   stimulus:
   "<div style='position: absolute; top: 18%; left: 20%'><p>" +
-    "Press <span class='key'>D</span> for items relating to:<br> " +
+    "Press <span class='key'>E</span> for items relating to:<br> " +
     "<span class='iat-category good-bad'>" + block_3_left_label_top  + "</span>" +
     "<br>" +
     "<span class='iat-category good-bad'>" + block_3_left_label_bottom + "</span>" +
   "</p></div>" +
   "<div style='position: absolute; top: 18%; right: 20%'><p>" +
-    "Press <span class='key'>K</span>  for items relating to:<br>" +
+    "Press <span class='key'>I</span>  for items relating to:<br>" +
     "<span class='iat-category good-bad'>" + block_3_right_label_top + "</span>" +
     "<br>" +
     "<span class='iat-category good-bad'>" + block_3_right_label_bottom  + "</span>" +
@@ -774,7 +769,7 @@ var iat_instructions_block_3 = {
     "</p>" +
     "<p class='instructions'>" +
     "<br>" +
-    "As before, use the <span class='key'>D</span> and <span class='key'>K</span> keys to categorize " +
+    "As before, use the <span class='key'>E</span> and <span class='key'>I</span> keys to categorize " +
     "items into the four groups left and right, and correct errors by hitting the other key." +
     "</p>" +
   "</div> " +
@@ -789,13 +784,13 @@ var iat_instructions_block_4 = {
   post_trial_gap: 200,
   stimulus:
   "<div style='position: absolute; top: 18%; left: 20%'><p>" +
-    "Press <span class='key'>D</span> for items relating to:<br> " +
+    "Press <span class='key'>E</span> for items relating to:<br> " +
     "<span class='iat-category good-bad'>" + block_4_left_label_top  + "</span>" +
     "<br>" +
     "<span class='iat-category good-bad'>" + block_4_left_label_bottom + "</span>" +
   "</p></div>" +
   "<div style='position: absolute; top: 18%; right: 20%'><p>" +
-    "Press <span class='key'>K</span>  for items relating to:<br>" +
+    "Press <span class='key'>I</span>  for items relating to:<br>" +
     "<span class='iat-category good-bad'>" + block_4_right_label_top + "</span>" +
     "<br>" +
     "<span class='iat-category good-bad'>" + block_4_right_label_bottom  + "</span>" +
@@ -807,7 +802,7 @@ var iat_instructions_block_4 = {
     "Categories have the same position as in Block 3." +
     "</p>" +
     "<p class='instructions'>" +
-    "As before, use the <span class='key'>D</span> and <span class='key'>K</span> keys to categorize " +
+    "As before, use the <span class='key'>E</span> and <span class='key'>I</span> keys to categorize " +
     "items into the four groups left and right, and correct errors by hitting the other key." +
     "</p>" +
   "</div> " +
@@ -1280,11 +1275,10 @@ var Rating_instructions_1 = {
   choices: [32]
 };
 
-
 var rating_Andy_45Andy = {
         type: 'survey-likert',
         post_trial_gap: 200,
-        preamble: "<br><br><img class='imgBack' src='stimuli/Face_45_Andy.jpeg'><br><br><br>",
+        preamble: "<br><br><img height = 300px src='stimuli/Face_45.png'><br><br><b><i>Andy is a person who...</b></i><br><br>",
         questions: [
           {prompt: "<b>Tends to be quiet.</b>", labels: scale_questionnaire, required: true},
           {prompt: "<b>Is compassionate, has a soft heart.</b>", labels: scale_questionnaire, required: true},
@@ -1319,10 +1313,6 @@ var rating_Andy_45Andy = {
         ],
         randomize_question_order: false, 
         button_label: 'Continue',
-        on_load: function() {
-          window.scrollTo(0, 0);
-          $(".jspsych-content").css("margin-top", "200px");
-        },
         on_finish: function(data) {
           data.task = "rating";
           var parsed_response  = JSON.parse(data.responses);
@@ -1363,7 +1353,7 @@ var rating_Andy_45Andy = {
 var rating_John_45Andy = {
         type: 'survey-likert',
         post_trial_gap: 200,
-        preamble: "<br><br><img class='imgBack' src='stimuli/Face_55_John.jpeg'><br><br>",
+        preamble: "<br><br><img height = 300px src='stimuli/Face_55.png'><br><br><b><i>John is a person who..</b></i><br><br>",
         questions: [
           {prompt: "<b>Tends to be quiet.</b>", labels: scale_questionnaire, required: true},
           {prompt: "<b>Is compassionate, has a soft heart.</b>", labels: scale_questionnaire, required: true},
@@ -1398,10 +1388,6 @@ var rating_John_45Andy = {
         ],
         randomize_question_order: false, 
         button_label: 'Continue',
-        on_load: function() {
-          window.scrollTo(0, 0);
-          $(".jspsych-content").css("margin-top", "200px");
-        },
         on_finish: function(data) {
           data.task = "rating";
           var parsed_response  = JSON.parse(data.responses);
@@ -1442,7 +1428,7 @@ var rating_John_45Andy = {
 var rating_Andy_55Andy = {
         type: 'survey-likert',
         post_trial_gap: 200,
-        preamble: "<br><br><img class='imgBack' src='stimuli/Face_55_Andy.jpeg'><br><br>",
+        preamble: "<br><br><img height = 300px src='stimuli/Face_55.png'><br><br><b><i>Andy is a person who...</b></i><br><br>",
         questions: [
           {prompt: "<b>Tends to be quiet.</b>", labels: scale_questionnaire, required: true},
           {prompt: "<b>Is compassionate, has a soft heart.</b>", labels: scale_questionnaire, required: true},
@@ -1477,10 +1463,6 @@ var rating_Andy_55Andy = {
         ],
         randomize_question_order: false, 
         button_label: 'Continue',
-        on_load: function() {
-          window.scrollTo(0, 0);
-          $(".jspsych-content").css("margin-top", "200px");
-        },
         on_finish: function(data) {
           data.task = "rating";
           var parsed_response  = JSON.parse(data.responses);
@@ -1518,11 +1500,10 @@ var rating_Andy_55Andy = {
         },
     };
 
-
 var rating_John_55Andy = {
         type: 'survey-likert',
         post_trial_gap: 200,
-        preamble: "<br><br><img class='imgBack' src='stimuli/Face_45_John.jpeg'><br><br>",
+        preamble: "<br><br><img height = 300px src='stimuli/Face_45.png'><br><br><b><i>John is a person who..</b></i><br><br>",
         questions: [
           {prompt: "<b>Tends to be quiet.</b>", labels: scale_questionnaire, required: true},
           {prompt: "<b>Is compassionate, has a soft heart.</b>", labels: scale_questionnaire, required: true},
@@ -1557,10 +1538,6 @@ var rating_John_55Andy = {
         ],
         randomize_question_order: false, 
         button_label: 'Continue',
-        on_load: function() {
-          window.scrollTo(0, 0);
-          $(".jspsych-content").css("margin-top", "200px");
-        },
         on_finish: function(data) {
           data.task = "rating";
           var parsed_response  = JSON.parse(data.responses);
@@ -1682,17 +1659,6 @@ var memory_group = {
   };
 
 
- /* First name */
-    var first_name_pp = {
-      type: 'survey-multi-choice',
-      questions: [{prompt: "Is your name Andy or John?", options: ['Yes (my name is Andy or John)', 'No'], required: true}],
-      button_label: "Continue",
-      on_finish: function(data) {
-          jsPsych.data.addProperties({
-              gender: JSON.parse(data.responses)["Q0"],
-          });
-      },
-  };
 
 
  /* AGE */
@@ -1889,7 +1855,6 @@ timeline.push(memory_group,
               demand_awareness,
               influence_awareness,
               demand_compliance,
-              first_name_pp,
               age,
               gender,
               language,
