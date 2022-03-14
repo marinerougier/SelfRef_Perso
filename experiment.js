@@ -1689,7 +1689,7 @@ var memory_group = {
       button_label: "Continue",
       on_finish: function(data) {
           jsPsych.data.addProperties({
-              gender: JSON.parse(data.responses)["Q0"],
+              first_name_pp: JSON.parse(data.responses)["Q0"],
           });
       },
   };
