@@ -571,7 +571,7 @@ var iat_instructions_1 = {
   post_trial_gap: 200,
   stimulus:
     "<h1 class ='custom-title'> Part 2: Categorization task </h1>" +
-    "<p class='instructions'>In this task, you will be asked to categorize words, pictures and names" +
+    "<p class='instructions'>In this task, you will be asked to categorize words, pictures, and names" +
     " as accurately as you can using the keyboard. In the following screen you will be presented" +
     " a list of category labels and the items that belong to each of these categories." +
     "</p>" +
@@ -618,7 +618,7 @@ var iat_instructions_1_45_Andy = {
         "<img height = 50px src='stimuli/Andy_4_instr.jpeg'></td>" +
       "</tr>" +
       "<tr>" +
-        "<td><br><John:<br>(face picture and name in various fonts)</td>" +
+        "<td><br>John:<br>(face picture and name in various fonts)</td>" +
         "<td align='left'><br><img height = 100px src='stimuli/Face_55.png'>" +
         "<img height = 50px src='stimuli/John_1_instr.jpeg'>" +
         "<img height = 50px src='stimuli/John_2_instr.jpeg'>" +
@@ -664,7 +664,7 @@ var iat_instructions_1_55_Andy = {
         "<img height = 50px src='stimuli/Andy_4_instr.jpeg'></td>" +
       "</tr>" +
       "<tr>" +
-        "<td><br><John:<br>(face picture and name in various fonts)</td>" +
+        "<td><br>John:<br>(face picture and name in various fonts)</td>" +
         "<td align='left'><br><img height = 100px src='stimuli/Face_45.png'>" +
         "<img height = 50px src='stimuli/John_1_instr.jpeg'>" +
         "<img height = 50px src='stimuli/John_2_instr.jpeg'>" +
