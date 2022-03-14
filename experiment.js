@@ -1828,7 +1828,7 @@ var fullscreen_trial_exit = {
 
 var timeline = [];
 
-//timeline.push(consent);
+timeline.push(consent);
 
 // fullscreen
 timeline.push(
@@ -1841,7 +1841,7 @@ timeline.push(save_id);
 
 
 timeline.push(Personality_instructions_1,
-              //rating_self,
+              rating_self,
               Personality_instructions_end,
               hiding_cursor)
 
