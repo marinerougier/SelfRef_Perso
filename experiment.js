@@ -740,7 +740,7 @@ var iat_instructions_block_2 = {
     "Categories have the same position as in Block 1." +
     "</p>" +
     "<p class='instructions'>" +
-    "As before, use the <span class='key'>E</span> and <span class='key'>K</span> keys to categorize " +
+    "As before, use the <span class='key'>D</span> and <span class='key'>K</span> keys to categorize " +
     "items into the four groups left and right, and correct errors by hitting the other key." +
     "</p>" +
   "</div> " +
